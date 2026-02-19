@@ -21,25 +21,25 @@ To prove that, we need two ingredients:
 
 ### 1.1 Monthly inflation (MoM)
 
-Let $ CPI_t $ be the CPI index in month $ t $.
+Let $CPI_t$ be the CPI index in month $t$.
 
 $$
 \pi_t = 100 \times \left(\frac{CPI_t}{CPI_{t-1}} - 1\right)
 $$
 
-- $ \pi_t $: monthly inflation in percent
-- If $ \pi_t = 1 $, prices rose ~1% from last month
+- $\pi_t$: monthly inflation in percent
+- If $\pi_t = 1$, prices rose ~1% from last month
 
 ### 1.2 Monthly FX change (USD/MRU)
 
-Let $ FX_t $ be the monthly average USD/MRU in month $ t $.
+Let $FX_t$ be the monthly average USD/MRU in month $t$.
 
 $$
 \Delta fx_t = 100 \times \left(\frac{FX_t}{FX_{t-1}} - 1\right)
 $$
 
-- If $ \Delta fx_t > 0 $: the Ouguiya weakened vs USD (depreciation)
-- If $ \Delta fx_t < 0 $: the Ouguiya strengthened vs USD (appreciation)
+- If $\Delta fx_t > 0$: the Ouguiya weakened vs USD (depreciation)
+- If $\Delta fx_t < 0$: the Ouguiya strengthened vs USD (appreciation)
 
 ---
 
@@ -53,12 +53,12 @@ $$
 
 Every term has a real-world meaning:
 
-- $ \alpha $ (alpha): baseline inflation drift (what inflation tends to be even if FX is flat)
-- $ \beta $ (beta): **FX pass-through**
-  - if $ \beta = 0.12 $, then a 1% USD/MRU depreciation is associated with ~0.12% higher monthly inflation
-- $ \rho $ (rho): **inflation persistence / inertia / memory**
-  - if $ \rho = 0.74 $, then 74% of last month's inflation carries into this month
-- $ \varepsilon_t $ (epsilon): everything else (supply shocks, policy, commodity prices, etc.)
+- $\alpha$ (alpha): baseline inflation drift (what inflation tends to be even if FX is flat)
+- $\beta$ (beta): **FX pass-through**
+  - if $\beta = 0.12$, then a 1% USD/MRU depreciation is associated with ~0.12% higher monthly inflation
+- $\rho$ (rho): **inflation persistence / inertia / memory**
+  - if $\rho = 0.74$, then 74% of last month's inflation carries into this month
+- $\varepsilon_t$ (epsilon): everything else (supply shocks, policy, commodity prices, etc.)
 
 Important: this is **not** a claim of perfect causality.
 It is a disciplined way to describe system behavior.
@@ -74,13 +74,13 @@ A classic problem in small open economies is:
 - CPI becomes persistent via expectations and pricing behavior
 
 In an "amplifier" regime:
-- $ \beta $ is meaningful (FX transmits)
-- $ \rho $ is high (inflation persists)
+- $\beta$ is meaningful (FX transmits)
+- $\rho$ is high (inflation persists)
 - a shock today influences next month and the month after
 
 In an "absorber" regime:
-- $ \beta $ weakens (FX transmits less)
-- $ \rho $ weakens (inflation forgets faster)
+- $\beta$ weakens (FX transmits less)
+- $\rho$ weakens (inflation forgets faster)
 - shocks dampen instead of propagating
 
 So the signature test is not "was inflation low?"
@@ -96,7 +96,7 @@ This chart is the visual proof of decoupling:
 
 > If the inflation system changed, it should show up here.
 
-![Structural Overlay (β and ρ)](assets/charts/09_structural_overlay.png)
+![Structural Overlay (β and ρ)](docs/assets/charts/09_structural_overlay.png)
 
 ---
 
@@ -109,8 +109,8 @@ We split the sample into two equal-length windows:
 
 Then we re-estimated:
 
-- $ \beta $ for headline CPI and food CPI
-- $ \rho $ for headline CPI and food CPI
+- $\beta$ for headline CPI and food CPI
+- $\rho$ for headline CPI and food CPI
 
 The result table was produced by your analysis pipeline and saved as:
 
@@ -144,7 +144,7 @@ $$
 \pi_t \approx \rho \cdot \pi_{t-1}
 $$
 
-Then after $ h $ months, the remaining portion of a shock is:
+Then after $h$ months, the remaining portion of a shock is:
 
 $$
 \rho^h
@@ -152,9 +152,9 @@ $$
 
 You computed:
 
-- $ \rho \approx 0.573 $ in the full sample
+- $\rho \approx 0.573$ in the full sample
 - half-life ≈ **1.24 months**
-- shock remaining after 3 months: $ \rho^3 \approx 0.188 $
+- shock remaining after 3 months: $\rho^3 \approx 0.188$
 
 That means:
 
