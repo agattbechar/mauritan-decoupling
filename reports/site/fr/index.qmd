@@ -3,29 +3,29 @@
   <div class="aura-subtitle">
     L'inflation en Mauritanie n'a pas simplement baissé — elle a changé de comportement.
     
-    2020–2025, mesuré avec les données IPC + USD/MRU.
+    2020–2025, mesuré avec les données IPC + taux de change USD/MRU.
   </div>
   <div class="aura-byline">Bechar Agatt</div>
 </div>
 
 ---
 
-## La stabilité n'est pas une inflation faible.
+## La stabilité n'est pas une inflation faible.  
 ## La stabilité, c'est quand les chocs s'estompent au lieu de se multiplier.
 
 Entre février 2020 et décembre 2025, la Mauritanie a connu :
 
-- Un choc pandémique mondial
-- Un pic historique des prix alimentaires et énergétiques en 2022
-- Des transitions institutionnelles au niveau exécutif
-- Une modernisation du marché des changes
-- La transition vers le statut d'exportateur de gaz
+- Un choc mondial de pandémie  
+- Un pic historique des prix alimentaires et énergétiques en 2022  
+- Des transitions institutionnelles au niveau exécutif  
+- Une modernisation du marché des changes  
+- La transition vers le statut d'exportateur de gaz  
 
-L'inflation n'a pas simplement augmenté et diminué pendant cette période.
+L'inflation n'a pas simplement augmenté et baissé pendant cette période.
 
 Elle a **changé de comportement**.
 
-Ce rapport étudie si le système inflationniste mauritanien est passé d'un **régime amplificateur de chocs** à un **régime absorbant les chocs**.
+Ce rapport étudie si le système inflationniste de la Mauritanie est passé d'un **régime amplificateur de chocs** à un **régime amortisseur de chocs**.
 
 ---
 
@@ -35,7 +35,7 @@ Ce rapport étudie si le système inflationniste mauritanien est passé d'un **r
 
 Plus précisément :
 
-1. Le mouvement du taux de change USD/MRU se transmet-il à l'inflation ?
+1. Le mouvement du taux de change USD/MRU se transmet-il dans l'inflation ?
 2. Avec quelle force ?
 3. Avec quel délai ?
 4. Et cette transmission s'est-elle affaiblie après les réformes institutionnelles et du marché des changes ?
@@ -48,18 +48,18 @@ Nous mesurons.
 
 ## La Fenêtre de Données
 
-**Date de début : février 2020**
+**Date de début : 2020-02**
 
 Nous commençons en février 2020 pour des raisons disciplinées :
 
 - Cela évite le bruit transitionnel après l'investiture présidentielle de 2019.
-- Cela capture la période complète du choc macroéconomique COVID.
+- Cela capture la période complète du choc macro COVID.
 
-**Date de fin : décembre 2025**
+**Date de fin : 2025-12**
 
 Cela inclut :
 - Le pic inflationniste de 2022
-- La modernisation de la plateforme de change de 2023
+- La modernisation de la plateforme de change en 2023
 - La transition du Premier ministre en août 2024
 - La première période d'exportation de gaz
 
@@ -73,30 +73,30 @@ Elle est reproductible.
 
 Nous analysons trois paramètres comportementaux fondamentaux :
 
-### 1) Niveau
-L'indice IPC et ses variations mensuelles et annuelles.
+### 1) Niveau  
+L'indice CPI et ses variations mensuelles et annuelles.
 
-### 2) Transmission (β)
-Avec quelle force les mouvements de taux de change apparaissent dans l'inflation.
+### 2) Transmission (β)  
+Avec quelle force les mouvements de change apparaissent dans l'inflation.
 
 Mathématiquement :
 
 $$
-Inflation_t = \alpha + \beta \cdot FX_{t-k} + \varepsilon_t
+Inflation_t = \alpha + \beta \cdot Change_{t-k} + \varepsilon_t
 $$
 
-Si β est grand → l'inflation amplifie les mouvements de devise.  
+Si β est grand → l'inflation amplifie les mouvements de change.  
 Si β diminue → l'inflation devient isolée.
 
-### 3) Mémoire (ρ)
-L'inflation persiste-t-elle d'un mois à l'autre ?
+### 3) Mémoire (ρ)  
+L'inflation persiste-t-elle de mois en mois ?
 
 $$
 Inflation_t = \rho \cdot Inflation_{t-1} + u_t
 $$
 
-Si ρ est élevé → l'inflation porte une inertie.  
-Si ρ diminue → le système oublie les chocs plus vite.
+Si ρ est élevé → l'inflation porte de l'inertie.  
+Si ρ baisse → le système oublie les chocs plus vite.
 
 Ce n'est pas théorique.
 Nous estimons les deux.
@@ -105,9 +105,9 @@ Nous estimons les deux.
 
 ## Les Données de Base
 
-### Indice IPC (2010 = 100)
+### Indice CPI (2010 = 100)
 
-![Indice IPC](../docs/assets/charts/cpi_index.png)
+![Indice CPI](../docs/assets/charts/cpi_index.png)
 
 ---
 
@@ -119,23 +119,23 @@ Nous estimons les deux.
 
 ### Variation Mensuelle USD/MRU (MoM, %)
 
-![Variation du Change](../docs/assets/charts/fx_mom.png)
+![Variation Mensuelle Change](../docs/assets/charts/fx_mom.png)
 
 ---
 
-### Comparaison de Volatilité (6 Mois Glissants)
+### Comparaison de Volatilité (Glissante 6 Mois)
 
 ![Volatilité Glissante](../docs/assets/charts/volatility.png)
 
 ---
 
-## Ce Que Ce Site Démontrera
+## Ce Que Ce Site Démontre
 
 - 2022 était un **régime amplificateur**.
-- 2024–2025 montre les caractéristiques d'un **régime absorbant les chocs**.
-- La force de transmission (β) diminue.
-- La mémoire inflationniste (ρ) diminue.
-- La volatilité ne se propage plus en cascade.
+- 2024–2025 montre les caractéristiques d'un **régime amortisseur de chocs**.
+- La force de transmission (β) s'est effondrée.
+- La mémoire de l'inflation (ρ) a diminué.
+- Les chocs ne se propagent plus en cascade.
 
 Le résultat n'est pas cosmétique.
 
@@ -143,28 +143,35 @@ Il est structurel.
 
 ---
 
-## Pourquoi Cela Importe
+## Pourquoi C'est Important : Une Opportunité Rare
 
-Si l'inflation amplifie les chocs, l'économie est fragile.
+**Le régime amortisseur offre à la Mauritanie une opportunité rare : des revenus gaziers sans la volatilité macroéconomique typique.**
 
-Si l'inflation oublie les chocs, l'économie se stabilise.
+Les exportateurs de ressources font généralement face à un dilemme : les revenus exceptionnels créent une pression d'appréciation et des pics inflationnistes. L'économie devient volatile précisément quand elle devrait prospérer.
 
-La différence n'est pas rhétorique.
-Elle est mesurable.
+Vos résultats suggèrent quelque chose de différent.
 
-Et cela change la façon dont la politique économique devrait être conçue à l'ère du gaz.
+Avec un pass-through du change proche de zéro et une persistance de l'inflation en baisse, les chocs externes ne se transmettent plus dans les prix domestiques. Le mécanisme inflationniste s'est isolé.
+
+**Cela change le calcul.**
+
+La question n'est plus de savoir si le régime persistera — mais si les décideurs politiques utiliseront cette stabilité pour construire une croissance inclusive.
+
+Des capitaux moins chers. Des investissements à plus long terme. Un développement plus large au-delà de l'extraction. Tout cela devient possible quand le risque macroéconomique diminue structurellement.
+
+Les données montrent que le système a appris à absorber les chocs. La question est de savoir ce qui sera construit sur cette fondation.
 
 ---
 
-Ce rapport est entièrement fondé sur les données.
+Ce rapport est entièrement basé sur des données.
 
 Tous les graphiques sont reproductibles.  
 Toutes les transformations sont documentées.  
-Toutes les équations sont expliquées en langage simple.
+Toutes les équations sont expliquées en langage clair.
 
 Pas de spéculation.  
 Pas d'abstraction.  
-Uniquement un comportement mesuré.
+Seulement un comportement mesuré.
 
 ---
 
@@ -181,4 +188,3 @@ Ce rapport examine si le mécanisme inflationniste de la Mauritanie a subi une t
 ---
 
 [English](../index.qmd)
-

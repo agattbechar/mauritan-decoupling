@@ -129,13 +129,13 @@ We estimate both.
 
 ---
 
-## What This Site Will Demonstrate
+## What This Site Demonstrates
 
 - 2022 was an **amplifier regime**.
 - 2024–2025 shows characteristics of a **shock-absorbing regime**.
-- Transmission strength (β) declines.
-- Inflation memory (ρ) declines.
-- Volatility no longer cascades forward.
+- Transmission strength (β) collapsed.
+- Inflation memory (ρ) declined.
+- Shocks no longer cascade forward.
 
 The result is not cosmetic.
 
@@ -143,16 +143,23 @@ It is structural.
 
 ---
 
-## Why This Matters
+## Why This Matters: A Rare Opportunity
 
-If inflation amplifies shocks, the economy is fragile.
+**The absorber regime gives Mauritania a rare opportunity: gas revenue without the typical macro volatility.**
 
-If inflation forgets shocks, the economy stabilizes.
+Resource exporters usually face a dilemma: windfall revenue creates appreciation pressure and inflation spikes. The economy becomes volatile precisely when it should be prospering.
 
-The difference is not rhetoric.
-It is measurable.
+Your findings suggest something different.
 
-And it changes how policy should be designed in the gas-export era.
+With FX pass-through near zero and inflation persistence falling, external shocks no longer transmit into domestic prices. The inflation mechanism has become insulated.
+
+**This changes the calculus.**
+
+The question is no longer whether the regime will persist — it is whether policymakers will use this stability to build inclusive growth.
+
+Cheaper capital. Longer-term investment. Broader development beyond extraction. These become possible when macro risk structurally declines.
+
+The data shows the system learned to absorb shocks. The question is what gets built with that foundation.
 
 ---
 
@@ -181,4 +188,3 @@ This report examines whether Mauritania's inflation mechanism underwent a struct
 ---
 
 [Français](fr/index.qmd)
-
