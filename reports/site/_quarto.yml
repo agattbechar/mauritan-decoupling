@@ -69,12 +69,21 @@
        css: docs/assets/styles.css
        toc: true
        math: mathjax
-       include-in-header:
-         text: |
-           <style>
-           .MathJax { color: inherit !important; }
-           .MathJax svg { fill: currentColor; }
-           </style>
+
+   include-in-header:
+     text: |
+       <script>
+       window.MathJax = {
+         tex: {
+           inlineMath: [['$', '$'], ['\\(', '\\)']],
+           displayMath: [['$$', '$$'], ['\\[', '\\]']]
+         }
+       };
+       </script>
+       <style>
+       .MathJax { color: inherit !important; }
+       .MathJax svg { fill: currentColor !important; }
+       </style>
 
    execute:
      freeze: auto
