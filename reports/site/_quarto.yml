@@ -69,6 +69,12 @@
        css: docs/assets/styles.css
        toc: true
        math: mathjax
+       include-in-header:
+         text: |
+           <style>
+           .MathJax { color: inherit !important; }
+           .MathJax svg { fill: currentColor; }
+           </style>
 
    execute:
      freeze: auto
