@@ -154,7 +154,7 @@ $$
 \rho^h
 $$
 
-Vous avez calculé :
+Les calculs montrent :
 
 - $ \rho \approx 0,573 $ sur l'échantillon complet
 - demi-vie ≈ **1,24 mois**

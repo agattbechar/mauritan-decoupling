@@ -27,15 +27,15 @@ Fichier quotidien officiel du taux de change USD/MRU (format Excel)
 
 Les taux quotidiens sont convertis en moyennes mensuelles :
 
-\[
+$$
 FX_{\text{mois}} = \text{moyenne des USD/MRU quotidiens pendant le mois}
-\]
+$$
 
 Variation mensuelle en pourcentage :
 
-\[
+$$
 \Delta FX_t = \frac{FX_t - FX_{t-1}}{FX_{t-1}}
-\]
+$$
 
 Cela aligne la fréquence avec l'IPC.
 
@@ -84,15 +84,15 @@ Nous calculons l'inflation manuellement.
 
 Inflation mensuelle :
 
-\[
+$$
 \pi_t = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}}
-\]
+$$
 
 Inflation année sur année :
 
-\[
+$$
 \pi^{\text{YoY}}_t = \frac{CPI_t - CPI_{t-12}}{CPI_{t-12}}
-\]
+$$
 
 Aucune variation en pourcentage précalculée n'est utilisée.
 

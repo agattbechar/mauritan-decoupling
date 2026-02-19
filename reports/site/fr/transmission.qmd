@@ -23,9 +23,9 @@ $$
 
 Où :
 
-- $ \pi_t $ = inflation mensuelle
-- $ \Delta FX_t $ = changement mensuel de l'USD/MRU
-- $ \beta $ = coefficient de pass-through
+- $\pi_t$ = inflation mensuelle
+- $\Delta FX_t$ = changement mensuel de l'USD/MRU
+- $\beta$ = coefficient de pass-through
 
 Interprétation :
 

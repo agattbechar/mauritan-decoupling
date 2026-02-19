@@ -67,8 +67,8 @@ $$
 
 Où :
 
-- $ \pi_t $ = inflation mensuelle dans une catégorie
-- $ \beta $ = sensibilité au pass-through du change
+- $\pi_t$ = inflation mensuelle dans une catégorie
+- $\beta$ = sensibilité au pass-through du change
 
 Voici le β glissant pour le global et l'alimentation :
 

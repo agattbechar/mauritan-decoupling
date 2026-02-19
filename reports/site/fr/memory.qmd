@@ -24,9 +24,9 @@ $$
 
 Où :
 
-- $ \pi_t $ = inflation mensuelle
-- $ \rho $ = coefficient de persistance
-- $ \varepsilon_t $ = nouveau choc
+- $\pi_t$ = inflation mensuelle
+- $\rho$ = coefficient de persistance
+- $\varepsilon_t$ = nouveau choc
 
 Interprétation :
 
@@ -101,7 +101,7 @@ En utilisant votre estimation sur l'échantillon complet :
 
 - ρ ≈ 0,57
 - Demi-vie ≈ 1,24 mois
-- $ \rho^3 $ ≈ 0,188
+- $\rho^3$ ≈ 0,188
 
 Mais à l'intérieur du régime amortisseur, la persistance diminue encore.
 

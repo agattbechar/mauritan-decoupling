@@ -78,9 +78,9 @@ $$
 
 Où :
 
-- $ \pi_t $ = inflation mensuelle
-- $ \Delta FX_t $ = changement mensuel du change
-- $ \beta $ = sensibilité au pass-through
+- $\pi_t$ = inflation mensuelle
+- $\Delta FX_t$ = changement mensuel du change
+- $\beta$ = sensibilité au pass-through
 
 Interprétation :
 
@@ -113,10 +113,10 @@ $$
 
 Où :
 
-- $ \rho $ mesure la persistance
-- $ 0 < \rho < 1 $ → l'inflation a de la mémoire
-- $ \rho \approx 0 $ → l'inflation se réinitialise rapidement
-- $ \rho > 0,6 $ → forte inertie
+- $\rho$ mesure la persistance
+- $0 < \rho < 1$ → l'inflation a de la mémoire
+- $\rho \approx 0$ → l'inflation se réinitialise rapidement
+- $\rho > 0,6$ → forte inertie
 
 ---
 
@@ -132,7 +132,7 @@ Résultat estimé :
 
 - ρ ≈ 0,57
 - Demi-vie ≈ 1,24 mois
-- Après 3 mois : $ \rho^3 \approx 0,188 $
+- Après 3 mois : $\rho^3 \approx 0,188$
 
 Signification :
 

@@ -27,15 +27,15 @@ Daily official USD/MRU exchange rate file (Excel format)
 
 Daily rates are converted into monthly averages:
 
-\[
+$$
 FX_{month} = \text{mean of daily USD/MRU during month}
-\]
+$$
 
 Monthly percent change:
 
-\[
+$$
 \Delta FX_t = \frac{FX_t - FX_{t-1}}{FX_{t-1}}
-\]
+$$
 
 This aligns frequency with CPI.
 
@@ -84,15 +84,15 @@ We compute inflation manually.
 
 Monthly inflation:
 
-\[
+$$
 \pi_t = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}}
-\]
+$$
 
 Year-over-year inflation:
 
-\[
+$$
 \pi^{YoY}_t = \frac{CPI_t - CPI_{t-12}}{CPI_{t-12}}
-\]
+$$
 
 No precomputed percent changes are used.
 
