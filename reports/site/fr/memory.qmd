@@ -67,7 +67,7 @@ Deux régimes émergent à nouveau.
 
 ### Phase Amplificatrice (2022–2023)
 
-D'après votre tableau de régimes :
+D'après le tableau de régimes :
 
 - ρ global ≈ 0,60+
 - ρ alimentaire ≈ 0,74
@@ -90,14 +90,14 @@ L'inflation avait de la mémoire.
 
 ### Phase Amortissante (2024–2025)
 
-D'après votre tableau calculé :
+D'après le tableau calculé :
 
 - ρ global ≈ 0,30–0,40
 - ρ alimentaire ≈ 0,40
 
 La mémoire s'est affaiblie considérablement.
 
-En utilisant votre estimation sur l'échantillon complet :
+En utilisant l estimation sur l'échantillon complet :
 
 - ρ ≈ 0,57
 - Demi-vie ≈ 1,24 mois

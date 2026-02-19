@@ -50,7 +50,7 @@ The data clearly divides into two behavioral systems.
 
 ### Amplifier Regime (2022–2023)
 
-From your regime table:
+From the regime table:
 
 - **Headline β ≈ 0.12**
 - Food β significantly higher
@@ -73,7 +73,7 @@ The system amplified shocks.
 
 ### Absorber Regime (2024–2025)
 
-From your computed table:
+From the computed table:
 
 - **Headline β ≈ -0.02**
 - Food β collapsed

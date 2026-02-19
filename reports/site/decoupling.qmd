@@ -112,7 +112,7 @@ Then we re-estimated:
 - $\beta$ for headline CPI and food CPI
 - $\rho$ for headline CPI and food CPI
 
-The result table was produced by your analysis pipeline and saved as:
+The result table was produced by the analysis pipeline and saved as:
 
 - `analysis/outputs/10_regime_table.csv`
 
@@ -120,8 +120,8 @@ The result table was produced by your analysis pipeline and saved as:
 
 | Regime | β (Headline CPI) | ρ (Headline CPI) | β (Food CPI) | ρ (Food CPI) | Months |
 |---|---:|---:|---:|---:|---:|
-| Amplifier (2022-2023) | **0.121** | **0.738** | (measured in your output) | **0.738** (food persistence) | 24 |
-| Absorber (2024-2025) | **-0.022** | **0.399** | (measured in your output) | **0.399** (food persistence) | 24 |
+| Amplifier (2022-2023) | **0.121** | **0.738** | (measured in the output) | **0.738** (food persistence) | 24 |
+| Absorber (2024-2025) | **-0.022** | **0.399** | (measured in the output) | **0.399** (food persistence) | 24 |
 
 Interpretation:
 
@@ -150,7 +150,7 @@ $$
 \rho^h
 $$
 
-You computed:
+The computation shows:
 
 - $\rho \approx 0.573$ in the full sample
 - half-life ≈ **1.24 months**
@@ -173,7 +173,7 @@ A key sanity check:
 If inflation became stable only because the world calmed down,
 then volatility would collapse too.
 
-But your volatility results show:
+But the volatility results show:
 
 - FX volatility pre-2023: **0.4903**
 - FX volatility 2024+: **0.5036**

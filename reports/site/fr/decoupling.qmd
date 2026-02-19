@@ -117,7 +117,7 @@ Puis nous avons réestimé :
 - $ \beta $ pour l'IPC global et l'IPC alimentaire
 - $ \rho $ pour l'IPC global et l'IPC alimentaire
 
-Le tableau de résultats a été produit par votre pipeline d'analyse et sauvegardé sous :
+Le tableau de résultats a été produit par le pipeline d'analyse et sauvegardé sous :
 - `analysis/outputs/10_regime_table.csv`
 
 ### Tableau des Régimes (Mesuré)

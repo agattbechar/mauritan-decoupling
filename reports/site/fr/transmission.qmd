@@ -50,7 +50,7 @@ Les données se divisent clairement en deux systèmes comportementaux.
 
 ### Régime Amplificateur (2022–2023)
 
-D'après votre tableau de régimes :
+D'après le tableau de régimes :
 
 - **β global ≈ 0,12**
 - β alimentaire significativement plus élevé
@@ -73,7 +73,7 @@ Le système amplifiait les chocs.
 
 ### Régime Amortisseur (2024–2025)
 
-D'après votre tableau calculé :
+D'après le tableau calculé :
 
 - **β global ≈ -0,02**
 - β alimentaire s'est effondré
