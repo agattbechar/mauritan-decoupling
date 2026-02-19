@@ -1,0 +1,48 @@
+---
+title: Code
+---
+
+The analysis is built on three layers.
+
+## 1. Data Pipeline (`src/`)
+
+Transforms raw sources into analysis-ready datasets.
+
+- `build_cpi_baseline.py` — Constructs CPI index from ONS/ANSD microdata
+- `build_fx_monthly_usd.py` — Converts daily USD/MRU rates to monthly aggregates
+- `build_merged_dataset.py` — Joins CPI and FX on date, handles alignment
+- `build_inflation_from_cpi.py` — Computes MoM and YoY inflation rates
+
+The merged dataset: date, cpi_index, infl_mom_pct, fx_mom_pct.
+
+## 2. Core Analysis (`src/`)
+
+Statistical engine that tests the decoupling hypothesis.
+
+- `lag_correlation_analysis.py` — Cross-correlogram between FX and inflation at 0-12 month lags. Finds the delay structure.
+- `lag_profile.py` — Identifies the peak lag for regression (turns out to be 0-2 months)
+- `regression_baselines.py` — OLS with HAC standard errors (Newey-West). Model: inflation ~ FX_lag + inflation_lag1. The autoregressive term controls for persistence.
+- `regression_by_lag.py` — Runs the same model at each lag 0-6, maps how coefficients decay
+
+## 3. Regime Detection (`analysis/`)
+
+Detects if the relationship *changed* over time.
+
+- `metrics.py` — Computes half-life of inflation shocks via AR(1): ρ^months = 0.5. Also builds rolling 24-month volatility and correlation series.
+- `structural_overlay.py` — Plots rolling β (FX coefficient) and ρ (inflation persistence) over 2020-2025. Visual evidence of regime shift.
+- `regime_summary.py` — Compares pre-2023 vs post-2023 statistics
+
+## 4. Orchestration (`run_all.py`)
+
+Single entry point. Validates pipeline → runs all scripts → copies charts to report assets.
+
+## Key Techniques
+
+| Technique | Purpose |
+|-----------|---------|
+| HAC standard errors | Robust inference despite autocorrelation |
+| Rolling 24-month windows | Detect time-varying parameters |
+| Lag correlation profiles | Identify transmission delay |
+| AR(1) half-life | Measure shock persistence |
+
+The code doesn't assume decoupling — it tests for it.

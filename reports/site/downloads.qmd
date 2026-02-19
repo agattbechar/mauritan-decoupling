@@ -1,0 +1,15 @@
+---
+title: Downloads
+---
+
+## Data & Code
+
+| File | Description |
+|------|-------------|
+| [data.csv](files/data.csv) | Cleaned CPI and FX data |
+| [analysis.py](files/analysis.py) | Core analysis scripts |
+| [report.pdf](files/report.pdf) | Full PDF report |
+
+## Usage
+
+All code is MIT licensed. Cite as: Agatt (2025).

@@ -30,6 +30,11 @@ website:
             text: Context
           - href: appendix.qmd
             text: Appendix
+          - href: downloads.qmd
+            text: Downloads
+          - href: future.qmd
+            text: Future
+
       - text: "Français"
         menu:
           - href: fr/index.qmd
@@ -50,6 +55,13 @@ website:
             text: Contexte
           - href: fr/appendix.qmd
             text: Annexe
+          - href: fr/downloads.qmd
+            text: Téléchargements
+          - href: fr/future.qmd
+            text: Avenir
+
+      - href: code.qmd
+        text: Code
 
 format:
   html:
