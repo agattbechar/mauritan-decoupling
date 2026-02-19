@@ -64,7 +64,7 @@ Correlations between inflation(t) and FX_change(t-k):
 
 **Interpretation:** FX effects appear contemporaneously (lag 0) and fade quickly. There is no delayed build-up at 6-12 month lags. This rules out slow-burn transmission mechanisms.
 
-![](assets/charts/lag_correlation.png)
+![](docs/assets/charts/lag_correlation.png)
 
 ---
 

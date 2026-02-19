@@ -72,7 +72,7 @@ Where:
 
 Below is the rolling β for headline and food:
 
-![](assets/charts/07_rolling_beta_categories.png)
+![](docs/assets/charts/07_rolling_beta_categories.png)
 
 ---
 
@@ -128,7 +128,7 @@ Transport became a fast-adjusting category rather than a persistent amplifier.
 
 This overlay shows the interaction of β and ρ across time:
 
-![](assets/charts/09_structural_overlay.png)
+![](docs/assets/charts/09_structural_overlay.png)
 
 Interpretation:
 

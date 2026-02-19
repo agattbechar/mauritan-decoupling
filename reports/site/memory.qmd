@@ -57,7 +57,7 @@ Persistence determines whether inflation dies quietly or lingers.
 
 We estimate rolling 24-month AR(1) coefficients.
 
-![](assets/charts/04_rolling_rho_infl_24m.png)
+![](docs/assets/charts/04_rolling_rho_infl_24m.png)
 
 ---
 
@@ -117,7 +117,7 @@ Inflation is not monolithic.
 
 Below is the rolling persistence by category:
 
-![](assets/charts/08_rolling_rho_categories.png)
+![](docs/assets/charts/08_rolling_rho_categories.png)
 
 Observations:
 

@@ -79,9 +79,9 @@ $$
 
 Where:
 
-- $ \pi_t $ = monthly inflation
-- $ \Delta FX_t $ = monthly FX change
-- $ \beta $ = pass-through sensitivity
+- $\pi_t$ = monthly inflation
+- $\Delta FX_t$ = monthly FX change
+- $\beta$ = pass-through sensitivity
 
 Interpretation:
 
@@ -114,10 +114,10 @@ $$
 
 Where:
 
-- $ \rho $ measures persistence
-- $ 0 < \rho < 1 $ → inflation has memory
-- $ \rho \approx 0 $ → inflation resets quickly
-- $ \rho > 0.6 $ → strong inertia
+- $\rho$ measures persistence
+- $0 < \rho < 1$ → inflation has memory
+- $\rho \approx 0$ → inflation resets quickly
+- $\rho > 0.6$ → strong inertia
 
 ---
 
@@ -133,7 +133,7 @@ Estimated result:
 
 - Overall ρ ≈ 0.57
 - Half-life ≈ 1.24 months
-- After 3 months: $ \rho^3 ≈ 0.188 $
+- After 3 months: $\rho^3 ≈ 0.188$
 
 Meaning:
 

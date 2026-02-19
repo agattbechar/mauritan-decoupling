@@ -40,7 +40,7 @@ Interpretation:
 Pass-through is not constant across time.  
 We estimate β using rolling 24-month regressions.
 
-![](assets/charts/03_rolling_beta_fx_24m.png)
+![](docs/assets/charts/03_rolling_beta_fx_24m.png)
 
 ---
 
@@ -92,7 +92,7 @@ The system absorbed shocks instead of propagating them.
 
 Below is the same rolling beta with political regime markers:
 
-![](assets/charts/05_rolling_beta_with_markers.png)
+![](docs/assets/charts/05_rolling_beta_with_markers.png)
 
 Vertical markers include:
 
