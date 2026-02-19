@@ -1,72 +1,74 @@
 project:
-  type: website
-  output-dir: _site
+     type: website
+     output-dir: _site
 
 website:
-  title: "The Great Decoupling"
-  site-url: http://localhost:8000
-  
-navbar:
-    left:
-      - text: "English"
-        menu:
-          - href: index.qmd
-            text: Home
-          - href: decoupling.qmd
-            text: The Great Decoupling
-          - href: transmission.qmd
-            text: Transmission
-          - href: memory.qmd
-            text: Memory
-          - href: structure.qmd
-            text: Structure
-          - href: methodology.qmd
-            text: Methodology
-          - href: data.qmd
-            text: Data
-          - href: setting.qmd
-            text: Context
-          - href: appendix.qmd
-            text: Appendix
-          - href: downloads.qmd
-            text: Downloads
+     title: "The Great Decoupling"
+     site-url: http://localhost:8000
 
-      - text: "Français"
-        menu:
-          - href: fr/index.qmd
-            text: Accueil
-          - href: fr/decoupling.qmd
-            text: Le Grand Découplage
-          - href: fr/transmission.qmd
-            text: Transmission
-          - href: fr/memory.qmd
-            text: Mémoire
-          - href: fr/structure.qmd
-            text: Structure
-          - href: fr/methodology.qmd
-            text: Méthodologie
-          - href: fr/data.qmd
-            text: Données
-          - href: fr/setting.qmd
-            text: Contexte
-          - href: fr/appendix.qmd
-            text: Annexe
-          - href: fr/downloads.qmd
-            text: Téléchargements
+     navbar:
+       background: dark
+       foreground: light
+       left:
+         - text: "English"
+           menu:
+             - href: index.qmd
+               text: Home
+             - href: decoupling.qmd
+               text: The Great Decoupling
+             - href: transmission.qmd
+               text: Transmission
+             - href: memory.qmd
+               text: Memory
+             - href: structure.qmd
+               text: Structure
+             - href: methodology.qmd
+               text: Methodology
+             - href: data.qmd
+               text: Data
+             - href: setting.qmd
+               text: Context
+             - href: appendix.qmd
+               text: Appendix
+             - href: downloads.qmd
+               text: Downloads
 
-      - href: code.qmd
-        text: Code
+         - text: "Français"
+           menu:
+             - href: fr/index.qmd
+               text: Accueil
+             - href: fr/decoupling.qmd
+               text: Le Grand Découplage
+             - href: fr/transmission.qmd
+               text: Transmission
+             - href: fr/memory.qmd
+               text: Mémoire
+             - href: fr/structure.qmd
+               text: Structure
+             - href: fr/methodology.qmd
+               text: Méthodologie
+             - href: fr/data.qmd
+               text: Données
+             - href: fr/setting.qmd
+               text: Contexte
+             - href: fr/appendix.qmd
+               text: Annexe
+             - href: fr/downloads.qmd
+               text: Téléchargements
 
-      - href: future.qmd
-        text: Future
+         - href: code.qmd
+           text: Code
+
+         - href: future.qmd
+           text: Future
 
 format:
-  html:
-    theme: 
-      - darkly
-    css: docs/assets/styles.css
-    toc: true
-    math: mathjax
+     html:
+       theme:
+         - darkly
+       css: docs/assets/styles.css
+       toc: true
+       math: mathjax
 
 execute:
-  freeze: auto
+     freeze: auto
