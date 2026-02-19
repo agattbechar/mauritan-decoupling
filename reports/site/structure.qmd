@@ -61,14 +61,14 @@ It is the anchor of inflation psychology.
 
 We estimate rolling 24-month regressions:
 
-\[
+$$
 \pi_t^{(category)} = \alpha + \beta \Delta FX_t + \varepsilon_t
-\]
+$$
 
 Where:
 
-- \( \pi_t \) = monthly inflation in a category
-- \( \beta \) = FX pass-through sensitivity
+- $ \pi_t $ = monthly inflation in a category
+- $ \beta $ = FX pass-through sensitivity
 
 Below is the rolling β for headline and food:
 
@@ -208,3 +208,4 @@ Monetary credibility?
 Gas revenue expectations?
 
 The [Appendix](appendix.qmd) contains full regression tables, robustness checks, and the synthesis of what this transformation means for Mauritania's economic future.
+

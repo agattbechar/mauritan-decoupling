@@ -32,9 +32,9 @@ Why February 2020?
 - Aggregated to monthly average
 - Monthly percentage change computed:
 
-\[
+$$
 \Delta FX_t = \frac{FX_t - FX_{t-1}}{FX_{t-1}}
-\]
+$$
 
 ---
 
@@ -49,15 +49,15 @@ Selected series:
 
 Inflation computed manually:
 
-\[
+$$
 \pi_t = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}}
-\]
+$$
 
 Year-over-year:
 
-\[
+$$
 \pi^{YoY}_t = \frac{CPI_t - CPI_{t-12}}{CPI_{t-12}}
-\]
+$$
 
 We do not rely on precomputed inflation.
 
@@ -73,15 +73,15 @@ The pass-through coefficient measures:
 
 Model:
 
-\[
+$$
 \pi_t = \alpha + \beta \Delta FX_t + \varepsilon_t
-\]
+$$
 
 Where:
 
-- \( \pi_t \) = monthly inflation
-- \( \Delta FX_t \) = monthly FX change
-- \( \beta \) = pass-through sensitivity
+- $ \pi_t $ = monthly inflation
+- $ \Delta FX_t $ = monthly FX change
+- $ \beta $ = pass-through sensitivity
 
 Interpretation:
 
@@ -108,16 +108,16 @@ This produces time-varying β(t).
 
 Inflation memory is estimated using AR(1):
 
-\[
+$$
 \pi_t = \alpha + \rho \pi_{t-1} + \varepsilon_t
-\]
+$$
 
 Where:
 
-- \( \rho \) measures persistence
-- \( 0 < \rho < 1 \) → inflation has memory
-- \( \rho \approx 0 \) → inflation resets quickly
-- \( \rho > 0.6 \) → strong inertia
+- $ \rho $ measures persistence
+- $ 0 < \rho < 1 $ → inflation has memory
+- $ \rho \approx 0 $ → inflation resets quickly
+- $ \rho > 0.6 $ → strong inertia
 
 ---
 
@@ -125,15 +125,15 @@ Where:
 
 Half-life measures how long a shock lasts:
 
-\[
+$$
 \text{Half-Life} = \frac{\ln(0.5)}{\ln(\rho)}
-\]
+$$
 
 Estimated result:
 
 - Overall ρ ≈ 0.57
 - Half-life ≈ 1.24 months
-- After 3 months: \( \rho^3 ≈ 0.188 \)
+- After 3 months: $ \rho^3 ≈ 0.188 $
 
 Meaning:
 
@@ -149,9 +149,9 @@ Rolling ρ shows regime behavior.
 
 Volatility computed as rolling 6-month standard deviation:
 
-\[
+$$
 \sigma_t = SD(\pi_{t-5}, ..., \pi_t)
-\]
+$$
 
 Comparison:
 
@@ -255,3 +255,4 @@ This report is fully reproducible from raw inputs.
 The next page turns to data transparency.
 
 Nothing hidden.
+

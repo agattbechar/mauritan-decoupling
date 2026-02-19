@@ -27,25 +27,25 @@ Nous le testons.
 
 ### 1.1 Inflation mensuelle (MoM)
 
-Soit \( CPI_t \) l'indice IPC au mois \( t \).
+Soit $ CPI_t $ l'indice IPC au mois $ t $.
 
-\[
+$$
 \pi_t = 100 \times \left(\frac{CPI_t}{CPI_{t-1}} - 1\right)
-\]
+$$
 
-- \( \pi_t \) : inflation mensuelle en pourcentage
-- Si \( \pi_t = 1 \), les prix ont augmenté d'environ 1% par rapport au mois dernier
+- $ \pi_t $ : inflation mensuelle en pourcentage
+- Si $ \pi_t = 1 $, les prix ont augmenté d'environ 1% par rapport au mois dernier
 
 ### 1.2 Variation mensuelle du change (USD/MRU)
 
-Soit \( FX_t \) la moyenne mensuelle USD/MRU au mois \( t \).
+Soit $ FX_t $ la moyenne mensuelle USD/MRU au mois $ t $.
 
-\[
+$$
 \Delta fx_t = 100 \times \left(\frac{FX_t}{FX_{t-1}} - 1\right)
-\]
+$$
 
-- Si \( \Delta fx_t > 0 \) : l'Ouguiya s'est affaibli par rapport au USD (dépréciation)
-- Si \( \Delta fx_t < 0 \) : l'Ouguiya s'est renforcé par rapport au USD (appréciation)
+- Si $ \Delta fx_t > 0 $ : l'Ouguiya s'est affaibli par rapport au USD (dépréciation)
+- Si $ \Delta fx_t < 0 $ : l'Ouguiya s'est renforcé par rapport au USD (appréciation)
 
 ---
 
@@ -53,18 +53,18 @@ Soit \( FX_t \) la moyenne mensuelle USD/MRU au mois \( t \).
 
 Nous estimons une équation simple :
 
-\[
+$$
 \pi_t = \alpha + \beta \cdot \Delta fx_t + \rho \cdot \pi_{t-1} + \varepsilon_t
-\]
+$$
 
 Chaque terme a une signification concrète :
 
-- \( \alpha \) (alpha) : dérive inflationniste de base (ce que tend à être l'inflation même si le change est stable)
-- \( \beta \) (bêta) : **transmission du change**
-  - si \( \beta = 0,12 \), alors une dépréciation de 1% USD/MRU est associée à environ 0,12% d'inflation mensuelle en plus
-- \( \rho \) (rho) : **persistance/inertie/mémoire de l'inflation**
-  - si \( \rho = 0,74 \), alors 74% de l'inflation du mois dernier se transmet à ce mois-ci
-- \( \varepsilon_t \) (epsilon) : tout le reste (chocs d'offre, politique, prix des matières premières, etc.)
+- $ \alpha $ (alpha) : dérive inflationniste de base (ce que tend à être l'inflation même si le change est stable)
+- $ \beta $ (bêta) : **transmission du change**
+  - si $ \beta = 0,12 $, alors une dépréciation de 1% USD/MRU est associée à environ 0,12% d'inflation mensuelle en plus
+- $ \rho $ (rho) : **persistance/inertie/mémoire de l'inflation**
+  - si $ \rho = 0,74 $, alors 74% de l'inflation du mois dernier se transmet à ce mois-ci
+- $ \varepsilon_t $ (epsilon) : tout le reste (chocs d'offre, politique, prix des matières premières, etc.)
 
 Important : ce n'est pas une revendication de causalité parfaite.
 C'est une façon disciplinée de décrire le comportement du système.
@@ -80,13 +80,13 @@ Un problème classique dans les petites économies ouvertes est :
 - L'IPC devient persistant via les attentes et le comportement de fixation des prix
 
 Dans un régime « amplificateur » :
-- \( \beta \) est significatif (le change se transmet)
-- \( \rho \) est élevé (l'inflation persiste)
+- $ \beta $ est significatif (le change se transmet)
+- $ \rho $ est élevé (l'inflation persiste)
 - un choc aujourd'hui influence le mois prochain et le suivant
 
 Dans un régime « amortisseur » :
-- \( \beta \) s'affaiblit (le change se transmet moins)
-- \( \rho \) s'affaiblit (l'inflation oublie plus vite)
+- $ \beta $ s'affaiblit (le change se transmet moins)
+- $ \rho $ s'affaiblit (l'inflation oublie plus vite)
 - les chocs s'atténuent au lieu de se propager
 
 Donc le test de signature n'est pas « l'inflation était-elle faible ? »
@@ -114,8 +114,8 @@ Nous divisons l'échantillon en deux fenêtres de longueur égale :
 - **Régime amortisseur :** 2024–2025 (période post-modernisation et post-transition)
 
 Puis nous avons réestimé :
-- \( \beta \) pour l'IPC global et l'IPC alimentaire
-- \( \rho \) pour l'IPC global et l'IPC alimentaire
+- $ \beta $ pour l'IPC global et l'IPC alimentaire
+- $ \rho $ pour l'IPC global et l'IPC alimentaire
 
 Le tableau de résultats a été produit par votre pipeline d'analyse et sauvegardé sous :
 - `analysis/outputs/10_regime_table.csv`
@@ -144,21 +144,21 @@ La persistance donne une intuition claire.
 
 Si l'inflation suit :
 
-\[
+$$
 \pi_t \approx \rho \cdot \pi_{t-1}
-\]
+$$
 
-Alors après \( h \) mois, la portion restante d'un choc est :
+Alors après $ h $ mois, la portion restante d'un choc est :
 
-\[
+$$
 \rho^h
-\]
+$$
 
 Vous avez calculé :
 
-- \( \rho \approx 0,573 \) sur l'échantillon complet
+- $ \rho \approx 0,573 $ sur l'échantillon complet
 - demi-vie ≈ **1,24 mois**
-- choc restant après 3 mois : \( \rho^3 \approx 0,188 \)
+- choc restant après 3 mois : $ \rho^3 \approx 0,188 $
 
 Cela signifie :
 
@@ -223,3 +223,4 @@ Cette analyse procède par trois lentilles mécaniques :
 3. **[Structure](structure.qmd)** — Comment les différentes catégories d'IPC se comportent
 
 L'[Annexe](appendix.qmd) contient les tableaux de régression complets, les vérifications de robustesse, et la synthèse prospective de ce que ce découplage signifie pour l'ère du gaz en Mauritanie.
+

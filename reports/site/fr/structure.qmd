@@ -61,14 +61,14 @@ C'est l'ancre de la psychologie inflationniste.
 
 Nous estimons les régressions glissantes sur 24 mois :
 
-\[
+$$
 \pi_t^{(\text{catégorie})} = \alpha + \beta \Delta FX_t + \varepsilon_t
-\]
+$$
 
 Où :
 
-- \( \pi_t \) = inflation mensuelle dans une catégorie
-- \( \beta \) = sensibilité au pass-through du change
+- $ \pi_t $ = inflation mensuelle dans une catégorie
+- $ \beta $ = sensibilité au pass-through du change
 
 Voici le β glissant pour le global et l'alimentation :
 
@@ -186,3 +186,4 @@ La crédibilité monétaire ?
 Les attentes de revenus gaziers ?
 
 L'[Annexe](appendix.qmd) contient les tableaux de régression complets, les vérifications de robustesse, et la synthèse de ce que cette transformation signifie pour l'avenir économique de la Mauritanie.
+

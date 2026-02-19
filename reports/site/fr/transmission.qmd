@@ -17,15 +17,15 @@ Le pass-through mesure de combien l'inflation mensuelle change quand le taux de 
 
 Formellement :
 
-\[
+$$
 \pi_t = \alpha + \beta \Delta FX_t + \varepsilon_t
-\]
+$$
 
 Où :
 
-- \( \pi_t \) = inflation mensuelle
-- \( \Delta FX_t \) = changement mensuel de l'USD/MRU
-- \( \beta \) = coefficient de pass-through
+- $ \pi_t $ = inflation mensuelle
+- $ \Delta FX_t $ = changement mensuel de l'USD/MRU
+- $ \beta $ = coefficient de pass-through
 
 Interprétation :
 
@@ -125,3 +125,4 @@ C'est le premier pilier du Grand Découplage.
 
 L'inflation n'a pas simplement baissé.  
 Sa fonction de réaction a changé.
+

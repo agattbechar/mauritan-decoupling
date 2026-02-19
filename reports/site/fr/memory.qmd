@@ -18,15 +18,15 @@ Nous mesurons cela en utilisant la **persistance de l'inflation (ρ)**.
 
 Nous estimons un simple processus AR(1) :
 
-\[
+$$
 \pi_t = \alpha + \rho \pi_{t-1} + \varepsilon_t
-\]
+$$
 
 Où :
 
-- \( \pi_t \) = inflation mensuelle
-- \( \rho \) = coefficient de persistance
-- \( \varepsilon_t \) = nouveau choc
+- $ \pi_t $ = inflation mensuelle
+- $ \rho $ = coefficient de persistance
+- $ \varepsilon_t $ = nouveau choc
 
 Interprétation :
 
@@ -37,15 +37,15 @@ Interprétation :
 
 Une autre façon d'interpréter ρ :
 
-\[
+$$
 \text{Choc Restant Après k Mois} = \rho^k
-\]
+$$
 
 Si ρ = 0,6, alors après 3 mois :
 
-\[
+$$
 0,6^3 = 0,216
-\]
+$$
 
 Ce qui signifie que 21,6% du choc original reste encore.
 
@@ -101,7 +101,7 @@ En utilisant votre estimation sur l'échantillon complet :
 
 - ρ ≈ 0,57
 - Demi-vie ≈ 1,24 mois
-- \( \rho^3 \) ≈ 0,188
+- $ \rho^3 $ ≈ 0,188
 
 Mais à l'intérieur du régime amortisseur, la persistance diminue encore.
 
@@ -186,3 +186,4 @@ Elle a altéré sa chimie inflationniste.
 La couche suivante :
 
 Cette transformation était-elle uniforme à travers le panier de l'IPC ?
+

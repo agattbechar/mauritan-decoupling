@@ -81,9 +81,9 @@ Avec quelle force les mouvements de taux de change apparaissent dans l'inflation
 
 Mathématiquement :
 
-\[
+$$
 Inflation_t = \alpha + \beta \cdot FX_{t-k} + \varepsilon_t
-\]
+$$
 
 Si β est grand → l'inflation amplifie les mouvements de devise.  
 Si β diminue → l'inflation devient isolée.
@@ -91,9 +91,9 @@ Si β diminue → l'inflation devient isolée.
 ### 3) Mémoire (ρ)
 L'inflation persiste-t-elle d'un mois à l'autre ?
 
-\[
+$$
 Inflation_t = \rho \cdot Inflation_{t-1} + u_t
-\]
+$$
 
 Si ρ est élevé → l'inflation porte une inertie.  
 Si ρ diminue → le système oublie les chocs plus vite.
@@ -181,3 +181,4 @@ Ce rapport examine si le mécanisme inflationniste de la Mauritanie a subi une t
 ---
 
 [English](../index.qmd)
+

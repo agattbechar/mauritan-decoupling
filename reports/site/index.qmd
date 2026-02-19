@@ -81,9 +81,9 @@ How strongly exchange rate movements appear in inflation.
 
 Mathematically:
 
-\[
+$$
 Inflation_t = \alpha + \beta \cdot FX_{t-k} + \varepsilon_t
-\]
+$$
 
 If β is large → inflation amplifies currency moves.  
 If β shrinks → inflation becomes insulated.
@@ -91,9 +91,9 @@ If β shrinks → inflation becomes insulated.
 ### 3) Memory (ρ)  
 Does inflation persist month to month?
 
-\[
+$$
 Inflation_t = \rho \cdot Inflation_{t-1} + u_t
-\]
+$$
 
 If ρ is high → inflation carries inertia.  
 If ρ falls → the system forgets shocks faster.
@@ -181,3 +181,4 @@ This report examines whether Mauritania's inflation mechanism underwent a struct
 ---
 
 [Français](fr/index.qmd)
+

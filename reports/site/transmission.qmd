@@ -17,15 +17,15 @@ Pass-through measures how much monthly inflation changes when the exchange rate 
 
 Formally:
 
-\[
+$$
 \pi_t = \alpha + \beta \Delta FX_t + \varepsilon_t
-\]
+$$
 
 Where:
 
-- \( \pi_t \) = monthly inflation  
-- \( \Delta FX_t \) = monthly change in USD/MRU  
-- \( \beta \) = pass-through coefficient  
+- $ \pi_t $ = monthly inflation  
+- $ \Delta FX_t $ = monthly change in USD/MRU  
+- $ \beta $ = pass-through coefficient  
 
 Interpretation:
 
@@ -125,3 +125,4 @@ This is the first pillar of the Great Decoupling.
 
 Inflation did not just fall.  
 Its reaction function changed.
+

@@ -1,0 +1,15 @@
+   ---
+   title: Téléchargements
+   ---
+
+   ## Données et Code
+
+   | Fichier | Description |
+   |---------|-------------|
+   | [data.csv](../files/data.csv) | Données CPI et FX nettoyées |
+   | [analysis.py](../files/analysis.py) | Scripts d'analyse principaux |
+   | [report.pdf](../files/report.pdf) | Rapport complet PDF |
+
+   ## Utilisation
+
+   Tout le code est sous licence MIT. Citer comme : Agatt (2025).

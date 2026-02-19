@@ -18,15 +18,15 @@ We measure this using **inflation persistence (ρ)**.
 
 We estimate a simple AR(1) process:
 
-\[
+$$
 \pi_t = \alpha + \rho \pi_{t-1} + \varepsilon_t
-\]
+$$
 
 Where:
 
-- \( \pi_t \) = monthly inflation
-- \( \rho \) = persistence coefficient
-- \( \varepsilon_t \) = new shock
+- $ \pi_t $ = monthly inflation
+- $ \rho $ = persistence coefficient
+- $ \varepsilon_t $ = new shock
 
 Interpretation:
 
@@ -37,15 +37,15 @@ Interpretation:
 
 Another way to interpret ρ:
 
-\[
+$$
 \text{Shock Remaining After k Months} = \rho^k
-\]
+$$
 
 If ρ = 0.6, then after 3 months:
 
-\[
+$$
 0.6^3 = 0.216
-\]
+$$
 
 Meaning 21.6% of the original shock still remains.
 
@@ -186,3 +186,4 @@ It altered its inflation chemistry.
 The next layer:
 
 Was this transformation uniform across the CPI basket?
+
