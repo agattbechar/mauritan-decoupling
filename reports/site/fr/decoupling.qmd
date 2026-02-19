@@ -224,3 +224,4 @@ Cette analyse procède par trois lentilles mécaniques :
 
 L'[Annexe](appendix.qmd) contient les tableaux de régression complets, les vérifications de robustesse, et la synthèse prospective de ce que ce découplage signifie pour l'ère du gaz en Mauritanie.
 
+

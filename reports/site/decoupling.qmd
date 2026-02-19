@@ -241,3 +241,4 @@ This analysis proceeds through three mechanical lenses:
 
 The [Appendix](appendix.qmd) contains full regression tables, robustness checks, and the forward-looking synthesis of what this decoupling means for Mauritania's gas export era.
 
+
