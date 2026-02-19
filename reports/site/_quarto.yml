@@ -6,9 +6,7 @@ website:
   title: "The Great Decoupling"
   site-url: http://localhost:8000
   
-  navbar:
-    background: dark
-    foreground: light
+navbar:
     left:
       - text: "English"
         menu:
@@ -32,8 +30,6 @@ website:
             text: Appendix
           - href: downloads.qmd
             text: Downloads
-          - href: future.qmd
-            text: Future
 
       - text: "Français"
         menu:
@@ -57,11 +53,12 @@ website:
             text: Annexe
           - href: fr/downloads.qmd
             text: Téléchargements
-          - href: fr/future.qmd
-            text: Avenir
 
       - href: code.qmd
         text: Code
+
+      - href: future.qmd
+        text: Future
 
 format:
   html:
