@@ -216,6 +216,29 @@ Une adaptation institutionnelle ou structurelle dans le comportement de fixation
 
 ## Explorer les Évidences
 
+---
+
+## 9) Pourquoi C'est Important : Le Coût du Capital
+
+La stabilité macroéconomique n'est pas abstraite. Elle se traduit dans les coûts d'emprunt.
+
+Les pays à inflation volatile paient des taux d'intérêt plus élevés — les investisseurs exigent une prime pour l'incertitude. Quand l'inflation fluctue de manière imprévisible, les prêteurs facturent plus et prêtent à plus court terme.
+
+Vos résultats suggèrent une réduction structurelle de la volatilité inflationniste :
+- Le pass-through s'est effondré (β → 0)
+- La persistance a fortement chuté (ρ → 0,40)
+- Les chocs s'estompent plus vite (demi-vie réduite)
+
+**Ce que cela signifie :**
+
+Si les marchés reconnaissent ce changement de régime, les coûts d'emprunt souverains de la Mauritanie devraient baisser. Les entreprises domestiques peuvent accéder à des capitaux moins chers. L'investissement à plus long terme devient viable.
+
+Il ne s'agit pas du revenu gazier en soi. Il s'agit de savoir si les capitaux vont circuler *au-delà* du secteur extractif — vers les infrastructures, la manufacture, les services — parce que le risque macroéconomique a structurellement diminué.
+
+Le découplage crée les conditions préalables à un investissement généralisé, pas seulement à l'extraction de ressources.
+
+## Explorer les Évidences
+
 Cette analyse procède par trois lentilles mécaniques :
 
 1. **[Transmission](transmission.qmd)** — Comment les chocs de change se propagent (ou pas)

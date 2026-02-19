@@ -233,6 +233,29 @@ It says the system's mechanics changed in a measurable way.
 
 ## Explore the Evidence
 
+---
+
+## 10) Why This Matters: The Cost of Capital
+
+Macro stability is not abstract. It shows up in borrowing costs.
+
+Countries with volatile inflation pay higher interest rates — investors demand a premium for uncertainty. When inflation swings unpredictably, lenders charge more and lend shorter-term.
+
+Your findings suggest a structural reduction in inflation volatility:
+- Pass-through collapsed (β → 0)
+- Persistence fell sharply (ρ → 0.40)
+- Shocks fade faster (half-life dropped)
+
+**What this means:**
+
+If markets recognize this regime change, Mauritania's sovereign borrowing costs should fall. Domestic firms can access cheaper capital. Longer-term investment becomes viable.
+
+This is not about gas revenue itself. It is about whether capital will flow *beyond* the extractive sector — into infrastructure, manufacturing, services — because macro risk has structurally declined.
+
+The decoupling creates preconditions for broad-based investment, not just resource extraction.
+
+## Explore the Evidence
+
 This analysis proceeds through three mechanical lenses:
 
 1. **[Transmission](transmission.qmd)** — How FX shocks propagate (or don't)
