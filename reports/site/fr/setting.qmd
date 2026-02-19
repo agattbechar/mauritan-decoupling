@@ -1,0 +1,149 @@
+# Le Contexte : 2020–2025
+
+L'inflation ne bouge pas isolément.
+
+Elle réagit à :
+
+- Les cadres politiques
+- La crédibilité institutionnelle
+- Les chocs externes
+- La mécanique du régime de change
+
+La période de février 2020 à décembre 2025 n'est pas arbitraire.
+
+Elle représente un cycle macroéconomique complet.
+
+---
+
+# 1. Pourquoi Février 2020 ?
+
+L'ensemble de données commence en février 2020 pour trois raisons :
+
+1. C'est le premier mois où les données de change et d'IPC s'alignent proprement.
+2. Cela évite le bruit transitionnel de l'investiture présidentielle de 2019.
+3. Cela capture le début de la phase de choc COVID.
+
+La Mauritanie a confirmé son premier cas de COVID-19 le 13 mars 2020.
+
+Cela marque le premier choc macroéconomique global dans la fenêtre de l'échantillon.
+
+---
+
+# 2. Une Présidence en Trois Actes
+
+Cette période se déroule à travers trois phases institutionnelles distinctes.
+
+Ces phases importent parce que le comportement de l'inflation est façonné par la coordination politique.
+
+---
+
+## Acte I — Gestion de Crise (2020–2022)
+
+Premier Ministre : Mohamed Ould Bilal  
+Gouverneur de la Banque Centrale : Cheikh El Kebir (jusqu'en 2022)
+
+Caractéristiques :
+
+- Contraction économique COVID
+- Perturbation des chaînes d'approvisionnement mondiales
+- Volatilité des prix alimentaires et énergétiques
+- Approche de change géré
+- La BCM absorbait les chocs de change
+
+Inflation pendant cette phase :
+
+- Modérée en 2020–2021
+- Accélération rapide en 2022
+- Inflation annuelle de pointe au-dessus de 9%
+
+C'est la phase de stress.
+
+Les chocs ne s'estompaient pas rapidement.
+
+Ils persistaient.
+
+---
+
+## Acte II — Pivot Structurel (2022–2024)
+
+Gouverneur de la Banque Centrale : Mohamed Lamine Ould Dhehbi (à partir d'avril 2022)
+
+Changement institutionnel :
+
+- Renforcement de la transmission monétaire
+- Transition graduelle vers une tarification des changes aux enchères
+- Introduction en 2023 de la plateforme de change multi-prix
+- Participation interbancaire accrue
+
+Cette période inclut :
+
+- Choc mondial des matières premières (guerre en Ukraine)
+- L'inflation dépasse 9% en 2022
+- Début de la désinflation en 2023
+
+L'inflation devient volatile.
+
+La persistance augmente.
+
+C'est le régime amplificateur.
+
+---
+
+## Acte III — Consolidation Technocratique (2024–2025)
+
+Président réélu : 29 juin 2024  
+Premier Ministre : Mokhtar Ould Djay (août 2024)
+
+Signaux institutionnels :
+
+- Rationalisation administrative
+- Expansion de la gouvernance numérique
+- La phase d'exportation de gaz commence (avril 2025)
+
+Pendant cette période :
+
+- L'inflation chute fortement
+- La volatilité se stabilise
+- Les fluctuations du taux de change deviennent moins contagieuses
+
+C'est le régime amortisseur.
+
+Les chocs commencent à s'estomper plutôt que de se multiplier.
+
+---
+
+# 3. Dates Candidates de Rupture Structurelle
+
+Les dates suivantes sont traitées comme des marqueurs de régime dans les graphiques :
+
+- Mars 2020 — Arrivée du COVID
+- Août 2020 — Mohamed Ould Bilal nommé PM
+- Avril 2022 — Nouveau Gouverneur de la BCM
+- 2023 — Modernisation de la plateforme de change aux enchères
+- Juin 2024 — Réélection présidentielle
+- Août 2024 — Mokhtar Ould Djay nommé PM
+- Avril 2025 — Premières exportations de gaz du GTA
+
+Ce ne sont pas des causes supposées.
+
+Ce sont des ancres utilisées pour interpréter les changements dans les relations statistiques.
+
+---
+
+# 4. La Question Comportementale Centrale
+
+La question centrale de ce rapport n'est pas :
+
+"L'inflation était-elle élevée ?"
+
+La question est :
+
+**La structure de l'inflation a-t-elle changé ?**
+
+Plus précisément :
+
+- L'inflation est-elle devenue moins sensible aux chocs de change ?
+- L'inflation a-t-elle perdu sa mémoire ?
+- La volatilité est-elle devenue moins contagieuse ?
+
+Les sections suivantes passent du récit à la mesure.

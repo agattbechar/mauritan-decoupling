@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Quarto
+_site/
+.quarto/
+
+# Data files (keep raw, ignore processed if needed)
+# Uncomment if you don't want to commit processed data
+# data/processed/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.local

@@ -1,0 +1,191 @@
+# Données : Ce Qui a été Mesuré
+
+Chaque conclusion de ce rapport repose sur deux ensembles de données primaires :
+
+1. Le taux de change USD/MRU
+2. L'Indice des Prix à la Consommation (IPC) mauritanien
+
+Rien d'autre n'est introduit sans documentation.
+
+---
+
+# 1. Taux de Change (USD/MRU)
+
+### Source
+Banque Centrale de Mauritanie (BCM)  
+Fichier quotidien officiel du taux de change USD/MRU (format Excel)
+
+### Couverture
+- Début : 2020-02-01
+- Fin : 2025-12-19
+- Fréquence : Quotidienne
+- Devise : Dollar US vs Ouguiya mauritanien (MRU)
+
+---
+
+## 1.1 Agrégation Mensuelle
+
+Les taux quotidiens sont convertis en moyennes mensuelles :
+
+\[
+FX_{\text{mois}} = \text{moyenne des USD/MRU quotidiens pendant le mois}
+\]
+
+Variation mensuelle en pourcentage :
+
+\[
+\Delta FX_t = \frac{FX_t - FX_{t-1}}{FX_{t-1}}
+\]
+
+Cela aligne la fréquence avec l'IPC.
+
+---
+
+# 2. Indice des Prix à la Consommation (IPC)
+
+### Pays
+Mauritanie, République Islamique de
+
+### Observations dans le fichier brut
+150 séries au total pour la Mauritanie
+
+Celles-ci incluent :
+- Mensuel
+- Trimestriel
+- Annuel
+- Niveaux d'indice
+- Variations en pourcentage
+- Poids
+- Multiples catégories COICOP
+
+Nous filtrons strictement.
+
+---
+
+## 2.1 Règles de Sélection de Base
+
+Pour éviter de mélanger des séries incompatibles, l'IPC de base utilise :
+
+- FRÉQUENCE : Mensuelle
+- TYPE_DE_TRANSFORMATION : Période de référence standard (2010=100), Indice
+- COICOP_1999 : Tous les articles
+
+Série globale sélectionnée :
+
+MRT.CPI._T.SRP_IX.M
+
+C'est la série officielle de l'IPC mensuel global.
+
+---
+
+## 2.2 Calcul de l'Inflation
+
+Nous calculons l'inflation manuellement.
+
+Inflation mensuelle :
+
+\[
+\pi_t = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}}
+\]
+
+Inflation année sur année :
+
+\[
+\pi^{\text{YoY}}_t = \frac{CPI_t - CPI_{t-12}}{CPI_{t-12}}
+\]
+
+Aucune variation en pourcentage précalculée n'est utilisée.
+
+---
+
+# 3. Répartition COICOP
+
+L'IPC de la Mauritanie est divisé en 13 catégories :
+
+- Alimentation et boissons non alcoolisées
+- Logement, eau, électricité, gaz et combustibles
+- Transport
+- Santé
+- Éducation
+- Communication
+- Loisirs et culture
+- Habillage et chaussures
+- Restaurants et hôtels
+- Boissons alcoolisées, tabac et stupéfiants
+- Ameublement et entretien du foyer
+- Biens et services divers
+- Tous les articles
+
+Chaque catégorie a :
+
+- Indice mensuel
+- Série de poids (mensuelle et annuelle)
+
+Ceux-ci sont utilisés pour mesurer :
+
+- Le pass-through spécifique par catégorie
+- La persistance spécifique par catégorie
+- La contribution à l'inflation globale
+
+---
+
+# 4. Couverture Temporelle
+
+Ensemble de données final fusionné :
+
+- Début : 2020-02
+- Fin : 2025-12
+- Total de mois : 71
+
+Cette fenêtre inclut :
+
+- Choc d'offre COVID
+- Pic mondial des matières premières (2022)
+- Transition institutionnelle de la BCM (2022–2023)
+- Modernisation de la plateforme de change (2023)
+- Réélection présidentielle (2024)
+- Transition du Premier ministre (2024)
+- Phase initiale d'exportation de gaz (2025)
+
+---
+
+# 5. Sortie Traitée
+
+Ensemble de données fusionné stocké à :
+
+analysis/outputs/merged_fx_cpi_2020_2025.csv
+
+Contient :
+
+- date
+- fx_usd_avg
+- fx_mom_pct
+- cpi_index
+- infl_mom_pct
+- infl_yoy_pct
+- indices par catégorie (Alimentation, Transport, etc.)
+- taux d'inflation par catégorie
+- volatilité glissante
+- estimations de persistance glissante
+- estimations de pass-through glissant
+
+---
+
+# 6. Pourquoi Cela Importe
+
+L'intégrité de la recherche macroéconomique dépend de :
+
+- L'alignement des fréquences
+- La cohérence des séries
+- L'évitement du mélange de transformations
+- Le filtrage transparent
+
+Cet ensemble de données suit ces principes.
+
+Les conclusions ne sont pas rhétoriques.
+
+Elles sont mécaniques.
+
+---
+
+La section suivante montre comment ces mécaniques changent au fil du temps.

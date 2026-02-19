@@ -1,0 +1,188 @@
+# Structure : Où Vit l'Inflation
+
+L'inflation n'est pas un nombre unique.
+
+C'est un système pondéré de catégories.
+
+Certains prix évoluent avec les marchés mondiaux.  
+Certains évoluent avec les conditions domestiques.  
+Certains amplifient les chocs.  
+Certains les absorbent.
+
+Pour comprendre si la Mauritanie s'est réellement découplée des chocs de change,  
+il faut ouvrir le panier de l'IPC.
+
+---
+
+## 1. L'Architecture de l'IPC (COICOP 1999)
+
+L'IPC de la Mauritanie est construit selon les catégories COICOP.
+
+Groupes clés dans l'ensemble de données :
+
+- Alimentation et boissons non alcoolisées
+- Logement, eau, électricité, gaz et combustibles
+- Transport
+- Santé
+- Éducation
+- Communication
+- Loisirs et culture
+- Habillage et chaussures
+- Restaurants et hôtels
+- Boissons alcoolisées, tabac et stupéfiants
+- Ameublement et entretien du foyer
+- Biens et services divers
+
+L'inflation globale est une moyenne pondérée de tout cela.
+
+Mais toutes les catégories ne répondent pas également au change.
+
+---
+
+## 2. Pourquoi l'Alimentation Importe le Plus
+
+L'alimentation a un poids structurel dans l'IPC de la Mauritanie.
+
+Elle est :
+
+- Fortement importée (céréales, huiles, sucre)
+- Prix en USD sur les marchés mondiaux
+- Très visible pour les consommateurs
+- Comportementalement sensible
+
+Quand l'inflation alimentaire accélère, les attentes changent.
+
+L'alimentation n'est pas juste une autre catégorie.  
+C'est l'ancre de la psychologie inflationniste.
+
+---
+
+## 3. Pass-Through Glissant par Catégorie
+
+Nous estimons les régressions glissantes sur 24 mois :
+
+\[
+\pi_t^{(\text{catégorie})} = \alpha + \beta \Delta FX_t + \varepsilon_t
+\]
+
+Où :
+
+- \( \pi_t \) = inflation mensuelle dans une catégorie
+- \( \beta \) = sensibilité au pass-through du change
+
+Voici le β glissant pour le global et l'alimentation :
+
+![Bêta par Catégorie](../docs/assets/charts/07_rolling_beta_categories.png)
+
+---
+
+### Ce Que le Graphique Montre
+
+#### 2022–2023 (Phase Amplificatrice)
+
+- Le β alimentaire grimpe de façon spectaculaire.
+- Le β global suit.
+- La dépréciation du change se traduit rapidement en accélération des prix alimentaires.
+
+Cela confirme :
+
+L'épisode inflationniste de 2022 était amplifié à l'externe par l'alimentation.
+
+---
+
+#### 2024–2025 (Phase Amortissante)
+
+- Le β alimentaire diminue fortement.
+- Le β global approche zéro.
+- Par moments, le β devient légèrement négatif.
+
+C'est extraordinaire.
+
+Cela suggère :
+
+Les mouvements de taux de change ne se transmettent plus automatiquement aux prix à la consommation.
+
+---
+
+## 4. Transport : Le Canal de Choc
+
+Le transport se comporte différemment.
+
+Le transport est lié au carburant.
+
+Le carburant est prix en USD.
+
+Mais les prix du carburant incluent parfois des mécanismes de lissage.
+
+La persistance et le β glissants montrent :
+
+- Extrême volatilité en 2022
+- Effondrement de l'inertie d'ici 2024
+- Persistance quasi nulle d'ici 2025
+
+Le transport est devenu une catégorie d'ajustement rapide plutôt qu'un amplificateur persistant.
+
+---
+
+## 5. Superposition Structurelle : L'Image Complète du Régime
+
+Cette superposition montre l'interaction de β et ρ dans le temps :
+
+![Superposition Structurelle](../docs/assets/charts/09_structural_overlay.png)
+
+Interprétation :
+
+- 2022 : β élevé + ρ élevé → régime amplificateur
+- 2024–2025 : β faible + ρ faible → régime amortisseur
+
+La transmission et la mémoire diminuent ensemble.
+
+C'est le découplage.
+
+---
+
+## 6. Qu'est-ce Qui a Changé ?
+
+Plusieurs changements structurels sont survenus pendant cette période :
+
+- 2022 : Choc mondial des matières premières
+- 2023 : Modernisation de la plateforme de change
+- 2024 : Transition institutionnelle et stabilisation politique
+- 2025 : Début de la phase d'exportation de gaz
+
+Nous ne revendiquons pas la causalité.
+
+Mais le timing s'aligne.
+
+La fonction de réaction de l'économie a changé.
+
+---
+
+## 7. L'Insight Plus Profond
+
+L'inflation peut changer de deux façons :
+
+1) Le niveau baisse
+2) La rétroaction interne du système s'affaiblit
+
+La Mauritanie a connu les deux.
+
+La deuxième est plus importante.
+
+Parce que les systèmes qui oublient les chocs sont des systèmes qui se stabilisent.
+
+---
+
+## 8. La Question en Avant
+
+Si l'inertie alimentaire diminue,  
+et le pass-through du change s'affaiblit,
+
+alors qu'est-ce qui ancre les prix maintenant ?
+
+L'offre domestique ?  
+La discipline budgétaire ?  
+La crédibilité monétaire ?  
+Les attentes de revenus gaziers ?
+
+L'[Annexe](appendix.qmd) contient les tableaux de régression complets, les vérifications de robustesse, et la synthèse de ce que cette transformation signifie pour l'avenir économique de la Mauritanie.

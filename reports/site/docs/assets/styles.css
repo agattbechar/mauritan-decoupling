@@ -1,0 +1,62 @@
+/* Mauritania palette */
+:root {
+  --mru-green: #006233;
+  --mru-gold:  #FCD116;
+  --mru-red:   #C1272D;
+}
+
+/* ===== Material theme variables (LIGHT) ===== */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--mru-green);
+  --md-accent-fg-color: #b38900;
+
+  --md-typeset-a-color: var(--mru-green);
+
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #0b1220;
+  --md-default-fg-color--light: #5b6673;
+}
+
+/* ===== Material theme variables (DARK / TERMINAL) ===== */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0a3d23; /* deeper green for dark header */
+  --md-accent-fg-color: var(--mru-gold);
+
+  --md-typeset-a-color: #8fe0b0;  /* readable green link on dark */
+
+  --md-default-bg-color: #0b1220; /* terminal ink */
+  --md-default-fg-color: #e6e9ee;
+  --md-default-fg-color--light: #aab3c0;
+
+  --md-code-bg-color: #0f172a;
+}
+
+/* Headings: “quant” sharp */
+.md-typeset h1 { font-weight: 900; letter-spacing: -0.6px; }
+.md-typeset h2 { font-weight: 850; letter-spacing: -0.2px; }
+
+/* Links */
+.md-typeset a { font-weight: 750; text-decoration: none; }
+.md-typeset a:hover { text-decoration: underline; }
+
+/* Admonitions: green spine */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left: 4px solid var(--mru-green);
+}
+.md-typeset .admonition-title,
+.md-typeset summary { font-weight: 900; }
+
+/* Quant pill tags you can use in markdown */
+.quant-tag {
+  display: inline-block;
+  padding: .14rem .55rem;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: .85rem;
+  border: 1px solid currentColor;
+  line-height: 1.4;
+}
+.quant-tag.green { color: var(--mru-green); }
+.quant-tag.gold  { color: #b38900; }
+.quant-star { color: var(--mru-red); font-weight: 900; }

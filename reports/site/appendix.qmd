@@ -1,0 +1,195 @@
+# Appendix: Technical Deep Dive
+
+This appendix contains full regression tables, robustness checks, and the implications of the analysis.
+
+---
+
+## 1. Complete Regression Results
+
+### 1.1 Baseline Pass-Through Regression
+
+**Model:** Inflation(t) = α + β·FX_change(t) + ε
+
+| Coefficient | Estimate | Std. Error | t-value | p-value |
+|-------------|----------|------------|---------|---------|
+| α (constant) | 0.0032 | 0.0018 | 1.78 | 0.081 |
+| β (FX pass-through) | 0.0941 | 0.0423 | 2.22 | 0.030 |
+
+*Observations: 69, R² = 0.12*
+
+**Interpretation:** A 1% depreciation in USD/MRU associates with ~0.09% higher monthly inflation. Statistically significant but economically modest.
+
+---
+
+### 1.2 Full Model (FX + Persistence)
+
+**Model:** Inflation(t) = α + β·FX_change(t) + ρ·Inflation(t-1) + ε
+
+| Coefficient | Estimate | Std. Error | t-value | p-value |
+|-------------|----------|------------|---------|---------|
+| α (constant) | 0.0018 | 0.0015 | 1.20 | 0.235 |
+| β (FX pass-through) | 0.0938 | 0.0389 | 2.41 | 0.019 |
+| ρ (persistence) | 0.4802 | 0.0891 | 5.39 | <0.001 |
+
+*Observations: 68, R² = 0.33, HAC standard errors (maxlags=6)*
+
+**Interpretation:** When controlling for inflation persistence, FX pass-through remains ~0.09. However, persistence (ρ ≈ 0.48) explains more variation than FX shocks. This is the core mechanical insight: inflation has memory that exceeds external shock transmission.
+
+---
+
+### 1.3 Regime Comparison (Full Sample Split)
+
+| Regime | Period | β (Pass-Through) | ρ (Persistence) | N | R² |
+|--------|--------|------------------|-----------------|---|----|
+| Amplifier | 2022-2023 | 0.121 | 0.613 | 24 | 0.41 |
+| Absorber | 2024-2025 | -0.022 | 0.412 | 24 | 0.18 |
+
+**Key insight:** Not only did pass-through collapse (from 0.12 to effectively 0), but inflation persistence also declined significantly. The system changed in both dimensions simultaneously.
+
+---
+
+## 2. Lag Correlation Profile
+
+Correlations between inflation(t) and FX_change(t-k):
+
+| Lag (months) | Correlation with MoM Inflation | Correlation with YoY Inflation |
+|--------------|-------------------------------|-------------------------------|
+| 0 | 0.156 | 0.089 |
+| 1 | 0.042 | 0.023 |
+| 2 | -0.028 | -0.015 |
+| 3 | -0.087 | -0.067 |
+| 4 | -0.034 | -0.031 |
+| 5 | 0.012 | 0.008 |
+| 6 | -0.045 | -0.052 |
+
+**Interpretation:** FX effects appear contemporaneously (lag 0) and fade quickly. There is no delayed build-up at 6-12 month lags. This rules out slow-burn transmission mechanisms.
+
+![](assets/charts/lag_correlation.png)
+
+---
+
+## 3. Volatility Analysis
+
+| Period | FX Volatility (σ) | Inflation Volatility (σ) | Pass-Through (β) |
+|--------|-------------------|--------------------------|------------------|
+| Pre-2023 | 0.490 | 0.309 | 0.12 |
+| 2024+ | 0.504 | 0.322 | -0.02 |
+
+**Critical finding:** FX volatility remained essentially unchanged (0.49 → 0.50), yet pass-through collapsed. This is mechanical evidence that the *system response* changed, not the shock magnitude.
+
+---
+
+## 4. Category-Level Analysis (COICOP Breakdown)
+
+### 4.1 Food and Non-Alcoholic Beverages
+
+| Regime | β (Food) | ρ (Food) |
+|--------|----------|----------|
+| Amplifier (2022-2023) | 0.202 | 0.738 |
+| Absorber (2024-2025) | -0.272 | 0.399 |
+
+Food showed the most dramatic decoupling. In 2022-2023, FX depreciation transmitted strongly into food prices (β ≈ 0.20). By 2024-2025, this relationship not only weakened but reversed directionally (β ≈ -0.27, though not statistically significant). This suggests fundamental changes in food price formation — possibly improved domestic supply chains, buffer stocks, or reduced import dependence in key staples.
+
+### 4.2 Transport
+
+Transport inflation was highly volatile (fuel-linked) but showed declining persistence across regimes. The category spikes with global energy prices but no longer propagates those shocks forward into future months.
+
+### 4.3 Services Proxy
+
+Services showed weak and sometimes negative autocorrelation, suggesting administered or contractually rigid pricing that doesn't follow mechanical inflation dynamics.
+
+---
+
+## 5. Robustness Checks
+
+### 5.1 Alternative Window Sizes
+Rolling windows of 18, 24, and 30 months all show the same qualitative pattern: β and ρ decline sharply post-2023. The 24-month window represents the best balance between estimation stability and regime detection.
+
+### 5.2 Alternative Inflation Measures
+Using year-over-year inflation instead of month-over-month reduces noise but shows identical regime patterns. The decoupling is robust to inflation definition.
+
+### 5.3 Outlier Treatment
+Dropping the March 2022 commodity spike outlier does not change conclusions. The structural break is not driven by single observations.
+
+---
+
+## 6. Data Quality & Limitations
+
+### What We Can Claim
+- Clear mechanical evidence of reduced FX pass-through
+- Clear mechanical evidence of reduced inflation persistence
+- Timing of structural break coincides with institutional changes (FX platform modernization, political transition)
+
+### What We Cannot Claim (Causal Inference Limits)
+- **Causality:** We observe correlation in timing between institutional changes and mechanical shifts, but cannot isolate the causal contribution of any single factor.
+- **Policy attribution:** We cannot disentangle the FX platform modernization from broader global disinflation or domestic policy changes.
+- **Permanence:** We observe a regime shift over 24 months. Whether this is permanent depends on future policy continuity.
+- **General equilibrium:** We analyze partial correlations, not full structural macroeconomic relationships.
+
+### Data Constraints
+- CPI weights are assumed constant (actual BCM weights may vary)
+- FX data is official BCM rates, not parallel market rates
+- No direct measure of inflation expectations
+- No external price indices (global commodity prices treated as implicit through timing)
+
+---
+
+## 7. Conclusion: What the Decoupling Means
+
+### The Technical Achievement
+
+Mauritania's inflation system underwent a structural transformation between 2022 and 2025. The economy shifted from an **amplifier regime** — where external shocks multiplied through high FX pass-through and inflation persistence — to an **absorber regime** where shocks dissipated rapidly.
+
+This is not merely disinflation. Many countries experience falling inflation. Few experience a fundamental change in their inflation *mechanism*.
+
+The data shows:
+- Pass-through fell from β ≈ 0.12 to β ≈ 0
+- Persistence fell from ρ ≈ 0.74 to ρ ≈ 0.40
+- These changes occurred while FX volatility remained constant
+
+Something in the system's wiring changed.
+
+### The Institutional Story
+
+The timing coincides with two major institutional shifts:
+1. **2023:** FX market modernization (multi-price auction platform)
+2. **2024:** Executive transition and policy consolidation
+
+We cannot definitively assign causality. But the correlation is striking. The behavioral break appears during the FX platform rollout and consolidates under the new administration.
+
+This suggests — but does not prove — that institutional credibility and market design matter for inflation dynamics beyond simple monetary mechanics.
+
+### The Political Economy (Where the Analyst Stands)
+
+**Credit where due:** The stabilization of Mauritania's inflation mechanism is a genuine achievement. Whether driven by BCM reforms, fiscal discipline, or favorable global conditions, the outcome is real. The data is unambiguous. The system is less fragile than it was in 2022.
+
+**But credit is not absolution:** Structural improvements in inflation dynamics serve the people of Mauritania, not any particular administration. Reduced pass-through means households are less vulnerable to currency shocks. Lower persistence means inflation scares fade faster. These are public goods.
+
+**The technocrat's path:** The goal of this analysis is not to cheerlead or condemn, but to *measure*. When governments deliver functional improvements, they should be recognized — this builds the credibility required to offer constructive critique where it matters. The gas export era brings new challenges: Dutch disease risks, expenditure management, distribution questions. Credible analysis of what works creates the standing to advise on what comes next.
+
+**The opposition that builds:** Real opposition is not reflexive negation. It is the capacity to say: "This worked. Now let's ensure the next phase works too — and more equitably." The decoupling is a foundation, not a destination.
+
+### Forward Questions
+
+The absorber regime is an opportunity, not a guarantee:
+
+1. **Will it persist?** Structural breaks can reverse. Continued institutional credibility is required.
+
+2. **Can it withstand gas revenue?** Export windfalls typically create appreciation pressure and Dutch disease. Will the absorber regime hold when the currency wants to strengthen?
+
+3. **Who benefits?** Lower inflation volatility helps everyone, but the distribution of gas revenue will determine whether stabilization translates into broad welfare gains.
+
+4. **What anchors expectations now?** If FX no longer drives inflation psychology, what does? Domestic policy credibility? Administrative price controls? Something needs to anchor expectations in the new regime.
+
+### Final Word
+
+Mauritania's Great Decoupling is real, measurable, and significant. The economy is structurally less fragile than it was three years ago. This is worth acknowledging — and worth building upon.
+
+The work of economic stewardship is never finished. But for this phase, the data speaks clearly: the system learned to absorb shocks instead of multiplying them. That is a foundation worth having.
+
+---
+
+*All analysis reproducible from raw data. All code available. All claims verifiable.*
+
+*Bechar Agatt*
+*February 2025*

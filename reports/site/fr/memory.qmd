@@ -1,0 +1,188 @@
+# Mémoire : L'Inflation Oublie-t-elle ?
+
+L'inflation n'est pas seulement un niveau.  
+C'est un processus.
+
+Certaines économies connaissent des pics de prix temporaires.  
+D'autres connaissent une inflation qui s'autoalimente.
+
+Cette section pose une question simple mais décisive :
+
+> Après un choc, l'inflation s'estompe-t-elle — ou fait-elle écho ?
+
+Nous mesurons cela en utilisant la **persistance de l'inflation (ρ)**.
+
+---
+
+## 1. Qu'est-ce que la Persistance de l'Inflation ?
+
+Nous estimons un simple processus AR(1) :
+
+\[
+\pi_t = \alpha + \rho \pi_{t-1} + \varepsilon_t
+\]
+
+Où :
+
+- \( \pi_t \) = inflation mensuelle
+- \( \rho \) = coefficient de persistance
+- \( \varepsilon_t \) = nouveau choc
+
+Interprétation :
+
+- ρ = 0 → l'inflation n'a pas de mémoire
+- ρ entre 0 et 0,5 → mémoire modérée
+- ρ au-dessus de 0,5 → forte inertie
+- ρ proche de 1 → système inflationniste autoréinforçant
+
+Une autre façon d'interpréter ρ :
+
+\[
+\text{Choc Restant Après k Mois} = \rho^k
+\]
+
+Si ρ = 0,6, alors après 3 mois :
+
+\[
+0,6^3 = 0,216
+\]
+
+Ce qui signifie que 21,6% du choc original reste encore.
+
+La persistance détermine si l'inflation meut tranquillement ou persiste.
+
+---
+
+## 2. Mémoire Inflationniste Glissante (Fenêtre de 24 Mois)
+
+Nous estimons les coefficients AR(1) glissants sur 24 mois.
+
+![Persistance Glissante](../docs/assets/charts/04_rolling_rho_infl_24m.png)
+
+---
+
+## 3. Le Caractère de l'Inflation Change
+
+Deux régimes émergent à nouveau.
+
+### Phase Amplificatrice (2022–2023)
+
+D'après votre tableau de régimes :
+
+- ρ global ≈ 0,60+
+- ρ alimentaire ≈ 0,74
+
+C'est une inertie élevée.
+
+Interprétation :
+
+Un choc sur les prix alimentaires en 2022 ne disparaissait pas le mois suivant.  
+Il contaminait les mois à venir.
+
+Les entreprises augmentaient les prix non seulement à cause de nouveaux chocs,  
+mais parce que l'inflation était déjà élevée.
+
+C'est une inertie comportementale.
+
+L'inflation avait de la mémoire.
+
+---
+
+### Phase Amortissante (2024–2025)
+
+D'après votre tableau calculé :
+
+- ρ global ≈ 0,30–0,40
+- ρ alimentaire ≈ 0,40
+
+La mémoire s'est affaiblie considérablement.
+
+En utilisant votre estimation sur l'échantillon complet :
+
+- ρ ≈ 0,57
+- Demi-vie ≈ 1,24 mois
+- \( \rho^3 \) ≈ 0,188
+
+Mais à l'intérieur du régime amortisseur, la persistance diminue encore.
+
+Les chocs se dissipent plus vite.
+
+Le processus inflationniste devient moins autoréinforçant.
+
+---
+
+## 4. Inertie par Catégorie
+
+L'inflation n'est pas monolithique.
+
+Voici la persistance glissante par catégorie :
+
+![Persistance par Catégorie](../docs/assets/charts/08_rolling_rho_categories.png)
+
+Observations :
+
+- L'alimentation présente l'inertie la plus forte en 2022–2023.
+- Le transport grimpe fortement, puis s'effondre.
+- Le proxy services se comporte différemment — parfois même une autocorrélation négative.
+
+C'est important.
+
+Dans les petites économies ouvertes, l'alimentation et le carburant façonnent les attentes.
+
+Quand la persistance alimentaire diminue, la psychologie inflationniste change.
+
+---
+
+## 5. Pourquoi 2022 Était Différent
+
+En 2022 :
+
+- Choc mondial des matières premières
+- L'inflation a dépassé le seuil structurel de 5,53% identifié dans les études antérieures
+- Les entreprises ont commencé à indexer de façon comportementale
+
+Au-dessus de ce seuil :
+
+L'inflation cesse d'être mécanique.
+Elle devient adaptative.
+
+Les données le montrent clairement.
+
+---
+
+## 6. La Décomposition de la Mémoire
+
+D'ici 2024–2025 :
+
+- ρ diminue
+- β diminue
+- La volatilité se stabilise
+
+L'inflation cesse de faire écho.
+
+C'est le deuxième pilier du Grand Découplage.
+
+Le système ne se multiplie plus ses propres chocs.
+
+---
+
+## 7. Pourquoi Cela Importe
+
+Une inflation faible peut encore être fragile.
+
+Mais une faible persistance est structurelle.
+
+Quand la mémoire diminue :
+
+- La transmission de la politique s'améliore
+- Les chocs de change s'estompent plus vite
+- Les attentes se stabilisent
+- La crédibilité du régime augmente
+
+La Mauritanie n'a pas seulement baissé l'inflation.
+
+Elle a altéré sa chimie inflationniste.
+
+La couche suivante :
+
+Cette transformation était-elle uniforme à travers le panier de l'IPC ?

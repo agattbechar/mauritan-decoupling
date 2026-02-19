@@ -1,0 +1,258 @@
+# Méthodologie : Comment le Système a été Mesuré
+
+Ce rapport est narratif dans son ton.
+
+Mais les conclusions sont mécaniques.
+
+Chaque affirmation repose sur des transformations reproductibles et une structure statistique transparente.
+
+Rien n'est déduit sans mesure.
+
+---
+
+## 1. Fenêtre de Données
+
+**Période :** Février 2020 – Décembre 2025  
+**Fréquence :** Mensuelle
+
+Pourquoi février 2020 ?
+
+- Les données de change disponibles commencent le 2020-02-01
+- La série mensuelle de l'IPC s'aligne à partir de 2020-M02
+- Cela évite le bruit transitionnel juste après le changement présidentiel de 2019
+- Cela inclut le cycle complet de choc COVID et des matières premières
+
+---
+
+## 2. Sources de Données Principales
+
+### Taux de Change (Change)
+
+- USD/MRU quotidien
+- Agrégé en moyenne mensuelle
+- Variation mensuelle en pourcentage calculée :
+
+\[
+\Delta FX_t = \frac{FX_t - FX_{t-1}}{FX_{t-1}}
+\]
+
+---
+
+### Indice des Prix à la Consommation (IPC)
+
+Séries sélectionnées :
+
+- FRÉQUENCE : Mensuelle
+- TRANSFORMATION : Période de référence standard (2010=100), Indice
+- COICOP : Tous les articles (global)
+
+Inflation calculée manuellement :
+
+\[
+\pi_t = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}}
+\]
+
+Année sur année :
+
+\[
+\pi^{\text{YoY}}_t = \frac{CPI_t - CPI_{t-12}}{CPI_{t-12}}
+\]
+
+Nous ne comptons pas sur les variations en pourcentage précalculées.
+
+Nous calculons directement.
+
+---
+
+## 3. Pass-Through du Taux de Change (β)
+
+Le coefficient de pass-through mesure :
+
+> Dans quelle mesure l'inflation répond au mouvement du change.
+
+Modèle :
+
+\[
+\pi_t = \alpha + \beta \Delta FX_t + \varepsilon_t
+\]
+
+Où :
+
+- \( \pi_t \) = inflation mensuelle
+- \( \Delta FX_t \) = changement mensuel du change
+- \( \beta \) = sensibilité au pass-through
+
+Interprétation :
+
+- β > 0 → la dépréciation du change augmente l'inflation
+- β ≈ 0 → faible transmission
+- β < 0 → le mouvement du change ne se transmet pas dans la direction attendue
+
+---
+
+### Estimation Glissante
+
+Pour détecter les changements de régime, nous estimons β sur des fenêtres glissantes de 24 mois.
+
+Pourquoi 24 mois ?
+
+- Assez long pour stabiliser la régression
+- Assez court pour détecter les changements structurels
+
+Cela produit β(t) variable dans le temps.
+
+---
+
+## 4. Persistance de l'Inflation (ρ)
+
+La mémoire de l'inflation est estimée en utilisant AR(1) :
+
+\[
+\pi_t = \alpha + \rho \pi_{t-1} + \varepsilon_t
+\]
+
+Où :
+
+- \( \rho \) mesure la persistance
+- \( 0 < \rho < 1 \) → l'inflation a de la mémoire
+- \( \rho \approx 0 \) → l'inflation se réinitialise rapidement
+- \( \rho > 0,6 \) → forte inertie
+
+---
+
+### Demi-vie d'un Choc
+
+La demi-vie mesure combien de temps dure un choc :
+
+\[
+\text{Demi-vie} = \frac{\ln(0,5)}{\ln(\rho)}
+\]
+
+Résultat estimé :
+
+- ρ ≈ 0,57
+- Demi-vie ≈ 1,24 mois
+- Après 3 mois : \( \rho^3 \approx 0,188 \)
+
+Signification :
+
+Un choc typique perd 80% de sa force en trois mois.
+
+Mais ce n'était pas constant dans le temps.
+
+ρ glissant montre le comportement de régime.
+
+---
+
+## 5. Analyse de Volatilité
+
+Volatilité calculée comme l'écart-type glissant sur 6 mois :
+
+\[
+\sigma_t = \text{SD}(\pi_{t-5}, ..., \pi_t)
+\]
+
+Comparaison :
+
+- Volatilité du change pré-2023 : 0,4903
+- Volatilité du change 2024+ : 0,5036
+
+- Volatilité de l'inflation pré-2023 : 0,3088
+- Volatilité de l'inflation 2024+ : 0,3222
+
+Observation :
+
+La volatilité du change ne s'est pas effondrée.
+
+Mais la transmission s'est affaiblie.
+
+C'est critique.
+
+La taille du choc est restée.
+
+La réponse du système a changé.
+
+---
+
+## 6. Définition des Régimes
+
+Deux régimes structurels identifiés :
+
+### Régime Amplificateur (2022–2023)
+
+- β élevé
+- ρ élevé
+- Période de choc des matières premières
+
+### Régime Amortisseur (2024–2025)
+
+- β proche de zéro
+- ρ plus faible
+- Période de transition institutionnelle
+
+Ceux-ci ont été définis en utilisant les moyennes des coefficients glissants :
+
+Voir :
+analysis/outputs/10_regime_table.csv
+
+---
+
+## 7. Marqueurs de Rupture Structurelle
+
+Les graphiques annotent :
+
+- Mars 2020 (Choc COVID)
+- Août 2020 (PM Bilal nommé)
+- Avril 2022 (Changement de gouverneur de la BCM)
+- 2023 (Modernisation de la plateforme de change)
+- Juin 2024 (Réélection présidentielle)
+- Août 2024 (PM Mokhtar Ould Djay nommé)
+- Avril 2025 (Phase d'exportation de gaz)
+
+Ce ne sont pas des causes supposées.
+
+Ce sont des ancres contextuelles pour l'interprétation.
+
+---
+
+## 8. Ce Que Cette Méthodologie ne Revendique Pas
+
+- Pas de modèle de causalité structurelle
+- Pas de cadre DSGE
+- Pas de VECM ou modélisation de réponse à l'impulsion
+
+Ce projet mesure :
+
+La structure comportementale.
+
+Il suit :
+
+- La force de transmission
+- La persistance de la mémoire
+- L'interaction de volatilité
+
+Et teste si ces mécaniques ont changé.
+
+---
+
+## 9. Reproductibilité
+
+Tous les scripts situés dans :
+
+src/
+et
+analysis/
+
+Toutes les sorties traitées sauvegardées dans :
+
+analysis/outputs/
+
+Tous les graphiques générés programmatiquement.
+
+Ce rapport est entièrement reproductible à partir des entrées brutes.
+
+---
+
+La page suivante tourne vers la transparence des données.
+
+Rien de caché.

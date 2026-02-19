@@ -1,0 +1,210 @@
+# Structure: Where Inflation Lives
+
+Inflation is not a single number.
+
+It is a weighted system of categories.
+
+Some prices move with global markets.  
+Some move with domestic conditions.  
+Some amplify shocks.  
+Some absorb them.
+
+To understand whether Mauritania truly decoupled from FX shocks,  
+one must open the CPI basket.
+
+---
+
+## 1. The CPI Architecture (COICOP 1999)
+
+Mauritania’s CPI is built using COICOP categories.
+
+Key groups in the dataset:
+
+- Food and non-alcoholic beverages  
+- Transport  
+- Housing, water, electricity, gas and fuels  
+- Communication  
+- Clothing and footwear  
+- Education  
+- Health  
+- Restaurants and hotels  
+- Recreation and culture  
+- Miscellaneous goods and services  
+- Alcohol and tobacco  
+- Furnishings  
+
+Headline inflation is a weighted average of all of these.
+
+But not all categories respond equally to FX.
+
+---
+
+## 2. Why Food Matters Most
+
+Food carries structural weight in Mauritania’s CPI.
+
+It is:
+
+- Heavily imported (grains, oils, sugar)
+- USD-priced globally
+- Highly visible to consumers
+- Behaviorally sensitive
+
+When food inflation accelerates, expectations shift.
+
+Food is not just another category.  
+It is the anchor of inflation psychology.
+
+---
+
+## 3. Rolling FX Pass-Through by Category
+
+We estimate rolling 24-month regressions:
+
+\[
+\pi_t^{(category)} = \alpha + \beta \Delta FX_t + \varepsilon_t
+\]
+
+Where:
+
+- \( \pi_t \) = monthly inflation in a category
+- \( \beta \) = FX pass-through sensitivity
+
+Below is the rolling β for headline and food:
+
+![](assets/charts/07_rolling_beta_categories.png)
+
+---
+
+### What the Chart Shows
+
+#### 2022–2023 (Amplifier Phase)
+
+- Food β spikes dramatically.
+- Headline β follows.
+- FX depreciation translates rapidly into food price acceleration.
+
+This confirms:
+
+The 2022 inflation episode was externally amplified through food.
+
+---
+
+#### 2024–2025 (Absorber Phase)
+
+- Food β declines sharply.
+- Headline β approaches zero.
+- At moments, β turns slightly negative.
+
+This is extraordinary.
+
+It suggests:
+
+Exchange-rate movements no longer automatically transmit into consumer prices.
+
+---
+
+## 4. Transport: The Shock Channel
+
+Transport behaves differently.
+
+Transport is fuel-linked.
+
+Fuel is USD-priced.
+
+But fuel pricing sometimes includes smoothing mechanisms.
+
+Rolling persistence and β show:
+
+- Extreme volatility in 2022
+- Collapse in inertia by 2024
+- Near-zero persistence by 2025
+
+Transport became a fast-adjusting category rather than a persistent amplifier.
+
+---
+
+## 5. Structural Overlay: The Full Regime Picture
+
+This overlay shows the interaction of β and ρ across time:
+
+![](assets/charts/09_structural_overlay.png)
+
+Interpretation:
+
+- 2022: High β + High ρ → amplification regime
+- 2024–2025: Low β + Low ρ → absorber regime
+
+Both transmission and memory fall together.
+
+That is the decoupling.
+
+---
+
+## 6. The Regime Table (Empirical Confirmation)
+
+From the computed regime table:
+
+| Regime | Headline β | Food β | Headline ρ | Food ρ |
+|--------|------------|--------|------------|--------|
+| Amplifier (2022–2023) | Positive | High | High | Very High |
+| Absorber (2024–2025) | Near Zero | Lower | Lower | Moderate |
+
+Saved in:
+
+analysis/outputs/10_regime_table.csv
+
+
+This is not narrative.
+
+It is mechanical.
+
+The coefficients changed.
+
+---
+
+## 7. What Changed?
+
+Several structural shifts occurred during this period:
+
+- 2022: Global commodity shock
+- 2023: FX platform modernization
+- 2024: Institutional transition and policy stabilization
+- 2025: Gas export phase begins
+
+We do not claim causality.
+
+But the timing aligns.
+
+The economy’s reaction function altered.
+
+---
+
+## 8. The Deeper Insight
+
+Inflation can change in two ways:
+
+1) The level falls  
+2) The system’s internal feedback weakens  
+
+Mauritania experienced both.
+
+The second is more important.
+
+Because systems that forget shocks are systems that stabilize.
+
+---
+
+## 9. The Question Forward
+
+If food inertia declines,  
+and FX pass-through weakens,
+
+then what anchors prices now?
+
+Domestic supply?  
+Fiscal discipline?  
+Monetary credibility?  
+Gas revenue expectations?
+
+The [Appendix](appendix.qmd) contains full regression tables, robustness checks, and the synthesis of what this transformation means for Mauritania's economic future.

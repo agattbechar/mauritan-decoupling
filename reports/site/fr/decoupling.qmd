@@ -1,0 +1,225 @@
+# Le Grand Découplage
+
+## Stabilité et Découplage
+
+Ce qui suit est le cœur du projet.
+
+Il démontre, avec des données, que le système inflationniste de la Mauritanie n'a pas simplement **ralenti** après 2022 —
+il a changé de **mécanique**.
+
+Nous testons une affirmation comportementale :
+
+> **En 2022–2023, l'inflation se comportait comme un amplificateur de chocs.**  
+> **En 2024–2025, l'inflation se comportait comme un amortisseur de chocs.**
+
+Pour le prouver, nous avons besoin de deux ingrédients :
+
+- **Transmission (β) :** le change fait-il bouger l'inflation ?
+- **Mémoire (ρ) :** l'inflation se transmet-elle d'un mois à l'autre ?
+
+Nous ne présupposons pas que le change entraîne l'inflation.
+
+Nous le testons.
+
+---
+
+## 1) Explications des Symboles
+
+### 1.1 Inflation mensuelle (MoM)
+
+Soit \( CPI_t \) l'indice IPC au mois \( t \).
+
+\[
+\pi_t = 100 \times \left(\frac{CPI_t}{CPI_{t-1}} - 1\right)
+\]
+
+- \( \pi_t \) : inflation mensuelle en pourcentage
+- Si \( \pi_t = 1 \), les prix ont augmenté d'environ 1% par rapport au mois dernier
+
+### 1.2 Variation mensuelle du change (USD/MRU)
+
+Soit \( FX_t \) la moyenne mensuelle USD/MRU au mois \( t \).
+
+\[
+\Delta fx_t = 100 \times \left(\frac{FX_t}{FX_{t-1}} - 1\right)
+\]
+
+- Si \( \Delta fx_t > 0 \) : l'Ouguiya s'est affaibli par rapport au USD (dépréciation)
+- Si \( \Delta fx_t < 0 \) : l'Ouguiya s'est renforcé par rapport au USD (appréciation)
+
+---
+
+## 2) Le Modèle Comportemental
+
+Nous estimons une équation simple :
+
+\[
+\pi_t = \alpha + \beta \cdot \Delta fx_t + \rho \cdot \pi_{t-1} + \varepsilon_t
+\]
+
+Chaque terme a une signification concrète :
+
+- \( \alpha \) (alpha) : dérive inflationniste de base (ce que tend à être l'inflation même si le change est stable)
+- \( \beta \) (bêta) : **transmission du change**
+  - si \( \beta = 0,12 \), alors une dépréciation de 1% USD/MRU est associée à environ 0,12% d'inflation mensuelle en plus
+- \( \rho \) (rho) : **persistance/inertie/mémoire de l'inflation**
+  - si \( \rho = 0,74 \), alors 74% de l'inflation du mois dernier se transmet à ce mois-ci
+- \( \varepsilon_t \) (epsilon) : tout le reste (chocs d'offre, politique, prix des matières premières, etc.)
+
+Important : ce n'est pas une revendication de causalité parfaite.
+C'est une façon disciplinée de décrire le comportement du système.
+
+---
+
+## 3) Pourquoi « Découplage » est le Bon Mot
+
+Un problème classique dans les petites économies ouvertes est :
+
+- Les chocs de change entrent dans les prix à l'importation
+- Les prix à l'importation entrent dans l'IPC
+- L'IPC devient persistant via les attentes et le comportement de fixation des prix
+
+Dans un régime « amplificateur » :
+- \( \beta \) est significatif (le change se transmet)
+- \( \rho \) est élevé (l'inflation persiste)
+- un choc aujourd'hui influence le mois prochain et le suivant
+
+Dans un régime « amortisseur » :
+- \( \beta \) s'affaiblit (le change se transmet moins)
+- \( \rho \) s'affaiblit (l'inflation oublie plus vite)
+- les chocs s'atténuent au lieu de se propager
+
+Donc le test de signature n'est pas « l'inflation était-elle faible ? »
+C'est : **β et ρ ont-ils baissé ensemble ?**
+
+---
+
+## 4) Le Graphique de Superposition Structurelle (β et ρ)
+
+Ce graphique est la preuve visuelle du découplage :
+- la transmission s'affaiblit
+- la persistance s'affaiblit
+
+> Si le système inflationniste a changé, cela doit apparaître ici.
+
+![Superposition Structurelle (β et ρ)](../docs/assets/charts/09_structural_overlay.png)
+
+---
+
+## 5) La Division par Régimes
+
+Nous divisons l'échantillon en deux fenêtres de longueur égale :
+
+- **Régime amplificateur :** 2022–2023 (période de choc des matières premières)
+- **Régime amortisseur :** 2024–2025 (période post-modernisation et post-transition)
+
+Puis nous avons réestimé :
+- \( \beta \) pour l'IPC global et l'IPC alimentaire
+- \( \rho \) pour l'IPC global et l'IPC alimentaire
+
+Le tableau de résultats a été produit par votre pipeline d'analyse et sauvegardé sous :
+- `analysis/outputs/10_regime_table.csv`
+
+### Tableau des Régimes (Mesuré)
+
+| Régime | β (IPC Global) | ρ (IPC Global) | β (Alimentation) | ρ (Alimentation) | Mois |
+|---|---:|---:|---:|---:|---:|
+| Amplificateur (2022–2023) | **0,121** | **0,613** | **0,202** | **0,738** | 24 |
+| Amortisseur (2024–2025) | **-0,022** | **0,412** | **-0,272** | **0,399** | 24 |
+
+Interprétation :
+
+- En **2022–2023**, la dépréciation du change apparaît dans l'inflation (β positif).
+- En **2024–2025**, la relation change-inflation s'effondre (β ~ 0 ou négatif).
+- L'inflation devient également moins autoréinforçante (ρ diminue de ~0,74 à ~0,40).
+
+Ce n'est pas « l'inflation a baissé ».
+C'est **un changement de régime dans la dynamique inflationniste**.
+
+---
+
+## 6) Mémoire : Combien de Temps un Choc Reste-t-il Vivant ?
+
+La persistance donne une intuition claire.
+
+Si l'inflation suit :
+
+\[
+\pi_t \approx \rho \cdot \pi_{t-1}
+\]
+
+Alors après \( h \) mois, la portion restante d'un choc est :
+
+\[
+\rho^h
+\]
+
+Vous avez calculé :
+
+- \( \rho \approx 0,573 \) sur l'échantillon complet
+- demi-vie ≈ **1,24 mois**
+- choc restant après 3 mois : \( \rho^3 \approx 0,188 \)
+
+Cela signifie :
+
+- après 3 mois, seulement ~19% du choc reste (en moyenne)
+- mais en 2022–2023, la persistance était bien plus élevée que la moyenne
+- d'ici 2024–2025, la persistance chute fortement
+
+C'est exactement comment un « amplificateur » devient un « amortisseur ».
+
+---
+
+## 7) La Volatilité ne s'est pas Effondrée — Alors Qu'est-ce Qui a Changé ?
+
+Une vérification de cohérence clé :
+
+Si l'inflation était devenue stable uniquement parce que le monde s'est calmé,
+alors la volatilité se serait également effondrée.
+
+Mais vos résultats de volatilité montrent :
+
+- Volatilité du change pré-2023 : **0,4903**
+- Volatilité du change 2024+ : **0,5036**
+
+- Volatilité de l'inflation pré-2023 : **0,3088**
+- Volatilité de l'inflation 2024+ : **0,3222**
+
+Donc la volatilité n'a pratiquement pas changé.
+
+Mais la transmission a changé radicalement.
+
+C'est l'observation microstructure clé.
+
+Le canal de transmission des chocs s'est affaibli sans effondrement de volatilité.
+
+---
+
+## 8) Ce Que Ce Projet Montre Réellement
+
+L'inflation en Mauritanie (2020–2025) est :
+
+Pas purement déterminée par le change.
+Pas purement domestique non plus.
+Elle est :
+
+Amplifiée par les chocs via l'inertie.
+Les chocs de change frappent rapidement.
+La mémoire de l'inflation les porte en avant.
+Après 2023, le mécanisme de transmission s'affaiblit significativement.
+
+Cela suggère :
+
+Une adaptation institutionnelle ou structurelle dans le comportement de fixation des prix.
+
+---
+
+## Explorer les Évidences
+
+Cette analyse procède par trois lentilles mécaniques :
+
+1. **[Transmission](transmission.qmd)** — Comment les chocs de change se propagent (ou pas)
+2. **[Mémoire](memory.qmd)** — Comment l'inflation persiste (ou s'estompe)
+3. **[Structure](structure.qmd)** — Comment les différentes catégories d'IPC se comportent
+
+L'[Annexe](appendix.qmd) contient les tableaux de régression complets, les vérifications de robustesse, et la synthèse prospective de ce que ce découplage signifie pour l'ère du gaz en Mauritanie.

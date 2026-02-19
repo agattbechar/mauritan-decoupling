@@ -1,0 +1,149 @@
+# The Setting: 2020–2025
+
+Inflation does not move in isolation.
+
+It reacts to:
+
+- Policy frameworks
+- Institutional credibility
+- External shocks
+- Currency regime mechanics
+
+The period from February 2020 to December 2025 is not arbitrary.
+
+It represents a complete macroeconomic cycle.
+
+---
+
+# 1. Why February 2020?
+
+The dataset begins in February 2020 for three reasons:
+
+1. It is the first month where both FX and CPI data align cleanly.
+2. It avoids transition noise from the 2019 presidential inauguration.
+3. It captures the beginning of the COVID shock phase.
+
+Mauritania confirmed its first COVID-19 case on 13 March 2020.
+
+This marks the first global macro shock inside the sample window.
+
+---
+
+# 2. A Presidency in Three Acts
+
+This period unfolds across three distinct institutional phases.
+
+These phases matter because inflation behavior is shaped by policy coordination.
+
+---
+
+## Act I — Crisis Management (2020–2022)
+
+Prime Minister: Mohamed Ould Bilal  
+Central Bank Governor: Cheikh El Kebir (until 2022)
+
+Characteristics:
+
+- COVID economic contraction
+- Global supply chain disruption
+- Food and fuel price volatility
+- Managed exchange rate approach
+- BCM absorbing FX shocks
+
+Inflation during this phase:
+
+- Moderate in 2020–2021
+- Rapid acceleration in 2022
+- Peak annual inflation above 9%
+
+This is the stress phase.
+
+Shocks did not fade quickly.
+
+They lingered.
+
+---
+
+## Act II — Structural Pivot (2022–2024)
+
+Central Bank Governor: Mohamed Lamine Ould Dhehbi (from April 2022)
+
+Institutional shift:
+
+- Strengthening of monetary transmission
+- Gradual transition toward auction-based FX pricing
+- 2023 multi-price FX platform introduction
+- Increased interbank participation
+
+This period includes:
+
+- Global commodity spike (Ukraine war)
+- 2022 inflation breach above 9%
+- Beginning of disinflation in 2023
+
+Inflation becomes volatile.
+
+Persistence increases.
+
+This is the amplification regime.
+
+---
+
+## Act III — Technocratic Consolidation (2024–2025)
+
+President re-elected: 29 June 2024  
+Prime Minister: Mokhtar Ould Djay (August 2024)
+
+Institutional signals:
+
+- Administrative streamlining
+- Digital governance expansion
+- Gas export phase begins (April 2025)
+
+During this period:
+
+- Inflation falls sharply
+- Volatility stabilizes
+- Exchange rate fluctuations become less contagious
+
+This is the absorber regime.
+
+Shocks begin to fade rather than multiply.
+
+---
+
+# 3. Candidate Structural Break Dates
+
+The following dates are treated as regime markers in charts:
+
+- March 2020 — COVID arrival
+- August 2020 — PM Mohamed Ould Bilal appointed
+- April 2022 — New BCM Governor
+- 2023 — FX auction platform modernization
+- June 2024 — Presidential re-election
+- August 2024 — PM Mokhtar Ould Djay appointed
+- April 2025 — First GTA gas exports
+
+These are not assumed to cause changes.
+
+They are anchors used to interpret shifts in statistical relationships.
+
+---
+
+# 4. The Core Behavioral Question
+
+The central question of this report is not:
+
+"Was inflation high?"
+
+The question is:
+
+Did the structure of inflation change?
+
+Specifically:
+
+- Did inflation become less sensitive to FX shocks?
+- Did inflation lose its memory?
+- Did volatility become less contagious?
+
+The next sections move from narrative to measurement.

@@ -1,0 +1,127 @@
+# Transmission : L'Ombre du Dollar
+
+La Mauritanie est une petite économie ouverte.  
+Cela signifie que sa devise n'est pas une variable de fond — c'est une force structurelle.
+
+Cette section répond à une question claire :
+
+> Quand l'Ouguiya bouge, les prix suivent-ils ?
+
+Nous mesurons cela en utilisant le **pass-through du taux de change (β)**.
+
+---
+
+## 1. Qu'est-ce que le Pass-Through ?
+
+Le pass-through mesure de combien l'inflation mensuelle change quand le taux de change change.
+
+Formellement :
+
+\[
+\pi_t = \alpha + \beta \Delta FX_t + \varepsilon_t
+\]
+
+Où :
+
+- \( \pi_t \) = inflation mensuelle
+- \( \Delta FX_t \) = changement mensuel de l'USD/MRU
+- \( \beta \) = coefficient de pass-through
+
+Interprétation :
+
+- β = 0 → le change n'a pas d'effet sur l'inflation
+- β > 0 → la dépréciation augmente l'inflation
+- β < 0 → le système absorbe le choc
+
+---
+
+## 2. Pass-Through Glissant (Fenêtre de 24 Mois)
+
+Le pass-through n'est pas constant dans le temps.  
+Nous estimons β en utilisant des régressions glissantes sur 24 mois.
+
+![Pass-Through Glissant](../docs/assets/charts/03_rolling_beta_fx_24m.png)
+
+---
+
+## 3. Deux Régimes Apparaissent
+
+Les données se divisent clairement en deux systèmes comportementaux.
+
+### Régime Amplificateur (2022–2023)
+
+D'après votre tableau de régimes :
+
+- **β global ≈ 0,12**
+- β alimentaire significativement plus élevé
+- Haute persistance (voir section suivante)
+
+Cela signifie :
+
+Une dépréciation de 1% de l'Ouguiya se traduisait par environ 0,12% d'inflation mensuelle.
+
+Les chocs ne s'estompaient pas.
+Ils se transmettaient.
+
+C'était l'ère du pic des matières premières.
+Les prix alimentaires et énergétiques mondiaux ont grimpé en flèche.
+L'inflation a franchi le seuil structurel de 5,53% identifié dans les études mauritaniennes antérieures.
+
+Le système amplifiait les chocs.
+
+---
+
+### Régime Amortisseur (2024–2025)
+
+D'après votre tableau calculé :
+
+- **β global ≈ -0,02**
+- β alimentaire s'est effondré
+- Les chocs de change ne se transmettaient plus mécaniquement
+
+C'est une rupture structurelle.
+
+L'Ouguiya bougeait toujours.
+Mais l'inflation a cessé de répondre mécaniquement.
+
+Le système absorbait les chocs au lieu de les propager.
+
+---
+
+## 4. Superposition des Marqueurs Structurels
+
+Voici le même bêta glissant avec les marqueurs de régime politique :
+
+![Bêta Glissant avec Marqueurs](../docs/assets/charts/05_rolling_beta_with_markers.png)
+
+Les marqueurs verticaux incluent :
+
+- Mars 2020 – Choc COVID
+- Août 2020 – Nomination du PM Bilal
+- Février 2024 – Présidence de l'UA
+- Août 2024 – Nomination du PM Mokhtar Ould Djay
+
+La rupture comportementale s'aligne le plus clairement avec la transition de la plateforme de change en 2023 et se consolide pendant la réinitialisation politique de 2024.
+
+---
+
+## 5. Interprétation
+
+Ce n'est pas une question d'inflation faible.
+
+C'est une question d'**élasticité**.
+
+Entre 2022 et 2023 :
+
+- L'économie se comportait comme un amplificateur.
+- Les chocs externes se multipliaient en interne.
+
+Entre 2024 et 2025 :
+
+- L'économie se comportait comme un amortisseur de chocs.
+- Les chocs externes s'estompaient.
+
+C'est le premier pilier du Grand Découplage.
+
+L'inflation n'a pas simplement baissé.  
+Sa fonction de réaction a changé.

@@ -1,0 +1,183 @@
+<div class="aura-hero">
+  <div class="aura-title">The Great Decoupling</div>
+  <div class="aura-subtitle">
+    Mauritania's inflation didn't just fall — it changed behavior.
+    
+    2020–2025, measured with CPI + USD/MRU FX data.
+  </div>
+  <div class="aura-byline">Bechar Agatt</div>
+</div>
+
+---
+
+## Stability is not low inflation.  
+## Stability is when shocks fade instead of multiplying.
+
+Between February 2020 and December 2025, Mauritania experienced:
+
+- A global pandemic shock  
+- A historic 2022 food and energy spike  
+- Institutional transitions at the executive level  
+- A modernization of the foreign exchange market  
+- The transition toward gas-exporting status  
+
+Inflation did not merely rise and fall during this period.
+
+It **changed behavior**.
+
+This report studies whether Mauritania's inflation system shifted from an **amplifier of shocks** to a **shock-absorbing regime**.
+
+---
+
+## The Core Question
+
+> Did Mauritania's inflation mechanism structurally change between 2020 and 2025?
+
+More precisely:
+
+1. Does USD/MRU exchange rate movement transmit into inflation?
+2. With what strength?
+3. With what delay?
+4. And did that transmission weaken after institutional and FX market reforms?
+
+We do not speculate.
+
+We measure.
+
+---
+
+## The Data Window
+
+**Start date: 2020-02**
+
+We begin in February 2020 for disciplined reasons:
+
+- It avoids transitional noise after the 2019 presidential inauguration.
+- It captures the full COVID macro shock period.
+
+**End date: 2025-12**
+
+This includes:
+- The 2022 inflation spike
+- The 2023 FX platform modernization
+- The August 2024 Prime Minister transition
+- The first gas export period
+
+The window is intentional.
+It is clean.
+It is reproducible.
+
+---
+
+## What We Measure
+
+We analyze three core behavioral parameters:
+
+### 1) Level  
+The CPI index and its monthly and annual changes.
+
+### 2) Transmission (β)  
+How strongly exchange rate movements appear in inflation.
+
+Mathematically:
+
+\[
+Inflation_t = \alpha + \beta \cdot FX_{t-k} + \varepsilon_t
+\]
+
+If β is large → inflation amplifies currency moves.  
+If β shrinks → inflation becomes insulated.
+
+### 3) Memory (ρ)  
+Does inflation persist month to month?
+
+\[
+Inflation_t = \rho \cdot Inflation_{t-1} + u_t
+\]
+
+If ρ is high → inflation carries inertia.  
+If ρ falls → the system forgets shocks faster.
+
+This is not theoretical.
+We estimate both.
+
+---
+
+## The Baseline Data
+
+### CPI Index (2010 = 100)
+
+![CPI Index](docs/assets/charts/cpi_index.png)
+
+---
+
+### Monthly Inflation (MoM, %)
+
+![Monthly Inflation](docs/assets/charts/infl_mom.png)
+
+---
+
+### USD/MRU Monthly Change (MoM, %)
+
+![FX Monthly Change](docs/assets/charts/fx_mom.png)
+
+---
+
+### Volatility Comparison (6-Month Rolling)
+
+![Rolling Volatility](docs/assets/charts/volatility.png)
+
+---
+
+## What This Site Will Demonstrate
+
+- 2022 was an **amplifier regime**.
+- 2024–2025 shows characteristics of a **shock-absorbing regime**.
+- Transmission strength (β) declines.
+- Inflation memory (ρ) declines.
+- Volatility no longer cascades forward.
+
+The result is not cosmetic.
+
+It is structural.
+
+---
+
+## Why This Matters
+
+If inflation amplifies shocks, the economy is fragile.
+
+If inflation forgets shocks, the economy stabilizes.
+
+The difference is not rhetoric.
+It is measurable.
+
+And it changes how policy should be designed in the gas-export era.
+
+---
+
+This report is entirely data-driven.
+
+All charts are reproducible.  
+All transformations are documented.  
+All equations are explained in plain language.
+
+No speculation.  
+No abstraction.  
+Only measured behavior.
+
+---
+
+**Bechar Agatt**
+
+---
+
+## Explore the Analysis
+
+This report examines whether Mauritania's inflation mechanism underwent a structural transformation between 2020 and 2025.
+
+**[→ The Great Decoupling](decoupling.qmd)** — The core thesis: from amplifier to shock absorber
+
+---
+
+[Français](fr/index.qmd)

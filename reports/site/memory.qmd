@@ -1,0 +1,188 @@
+# Memory: Does Inflation Forget?
+
+Inflation is not only a level.  
+It is a process.
+
+Some economies experience temporary price spikes.  
+Others experience inflation that feeds on itself.
+
+This section asks a simple but decisive question:
+
+> After a shock, does inflation fade — or does it echo?
+
+We measure this using **inflation persistence (ρ)**.
+
+---
+
+## 1. What Is Inflation Persistence?
+
+We estimate a simple AR(1) process:
+
+\[
+\pi_t = \alpha + \rho \pi_{t-1} + \varepsilon_t
+\]
+
+Where:
+
+- \( \pi_t \) = monthly inflation
+- \( \rho \) = persistence coefficient
+- \( \varepsilon_t \) = new shock
+
+Interpretation:
+
+- ρ = 0 → inflation has no memory
+- ρ between 0 and 0.5 → moderate memory
+- ρ above 0.5 → strong inertia
+- ρ near 1 → self-reinforcing inflation system
+
+Another way to interpret ρ:
+
+\[
+\text{Shock Remaining After k Months} = \rho^k
+\]
+
+If ρ = 0.6, then after 3 months:
+
+\[
+0.6^3 = 0.216
+\]
+
+Meaning 21.6% of the original shock still remains.
+
+Persistence determines whether inflation dies quietly or lingers.
+
+---
+
+## 2. Rolling Inflation Memory (24-Month Window)
+
+We estimate rolling 24-month AR(1) coefficients.
+
+![](assets/charts/04_rolling_rho_infl_24m.png)
+
+---
+
+## 3. The Inflation Character Changes
+
+Two regimes emerge again.
+
+### Amplifier Phase (2022–2023)
+
+From your regime table:
+
+- Headline ρ ≈ 0.60+
+- Food ρ ≈ 0.74
+
+This is high inertia.
+
+Interpretation:
+
+A shock to food prices in 2022 did not disappear next month.  
+It contaminated future months.
+
+Businesses raised prices not only because of new shocks,  
+but because inflation was already elevated.
+
+This is behavioral inertia.
+
+Inflation had memory.
+
+---
+
+### Absorber Phase (2024–2025)
+
+From your computed table:
+
+- Headline ρ ≈ 0.30–0.40
+- Food ρ ≈ 0.40
+
+Memory weakened dramatically.
+
+Using your full-sample estimate:
+
+- ρ ≈ 0.57
+- Half-life ≈ 1.24 months
+- ρ³ ≈ 0.188
+
+But inside the absorber regime, persistence drops further.
+
+Shocks decay faster.
+
+The inflation process becomes less self-reinforcing.
+
+---
+
+## 4. Category-Level Inertia
+
+Inflation is not monolithic.
+
+Below is the rolling persistence by category:
+
+![](assets/charts/08_rolling_rho_categories.png)
+
+Observations:
+
+- Food exhibits the strongest inertia in 2022–2023.
+- Transport spikes sharply, then collapses.
+- Services proxy behaves differently — sometimes even negative autocorrelation.
+
+This matters.
+
+In small open economies, food and fuel shape expectations.
+
+When food persistence falls, inflation psychology shifts.
+
+---
+
+## 5. Why 2022 Was Different
+
+In 2022:
+
+- Global commodity shock
+- Inflation exceeded structural 5.53% threshold identified in prior Mauritanian studies
+- Businesses began indexing behaviorally
+
+Above that threshold:
+
+Inflation ceases to be mechanical.
+It becomes adaptive.
+
+The data shows this clearly.
+
+---
+
+## 6. The Decay of Memory
+
+By 2024–2025:
+
+- ρ falls
+- β falls
+- Volatility stabilizes
+
+Inflation stops echoing.
+
+This is the second pillar of the Great Decoupling.
+
+The system no longer multiplies its own shocks.
+
+---
+
+## 7. Why This Matters
+
+Low inflation can still be fragile.
+
+But low persistence is structural.
+
+When memory declines:
+
+- Policy transmission improves
+- FX shocks fade faster
+- Expectations stabilize
+- Regime credibility increases
+
+Mauritania did not only lower inflation.
+
+It altered its inflation chemistry.
+
+The next layer:
+
+Was this transformation uniform across the CPI basket?

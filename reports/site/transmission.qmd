@@ -1,0 +1,127 @@
+# Transmission: The Dollar’s Shadow
+
+Mauritania is a small open economy.  
+That means its currency is not a background variable — it is a structural force.
+
+This section answers one clear question:
+
+> When the Ouguiya moves, do prices follow?
+
+We measure this using **exchange rate pass-through (β)**.
+
+---
+
+## 1. What is Pass-Through?
+
+Pass-through measures how much monthly inflation changes when the exchange rate changes.
+
+Formally:
+
+\[
+\pi_t = \alpha + \beta \Delta FX_t + \varepsilon_t
+\]
+
+Where:
+
+- \( \pi_t \) = monthly inflation  
+- \( \Delta FX_t \) = monthly change in USD/MRU  
+- \( \beta \) = pass-through coefficient  
+
+Interpretation:
+
+- β = 0 → FX has no inflation effect  
+- β > 0 → depreciation raises inflation  
+- β < 0 → system absorbs shock  
+
+---
+
+## 2. Rolling Pass-Through (24-Month Window)
+
+Pass-through is not constant across time.  
+We estimate β using rolling 24-month regressions.
+
+![](assets/charts/03_rolling_beta_fx_24m.png)
+
+---
+
+## 3. Two Regimes Appear
+
+The data clearly divides into two behavioral systems.
+
+### Amplifier Regime (2022–2023)
+
+From your regime table:
+
+- **Headline β ≈ 0.12**
+- Food β significantly higher
+- High persistence (see next section)
+
+This means:
+
+A 1% depreciation in the Ouguiya translated into approximately 0.12% monthly inflation.
+
+Shocks did not fade.
+They transmitted.
+
+This was the commodity spike era.
+Global food and energy prices surged.
+Inflation breached the 5.53% structural threshold identified in prior Mauritanian studies.
+
+The system amplified shocks.
+
+---
+
+### Absorber Regime (2024–2025)
+
+From your computed table:
+
+- **Headline β ≈ -0.02**
+- Food β collapsed
+- FX shocks no longer mechanically transmitted
+
+This is a structural break.
+
+The Ouguiya still moved.
+But inflation stopped responding mechanically.
+
+The system absorbed shocks instead of propagating them.
+
+---
+
+## 4. Structural Markers Overlay
+
+Below is the same rolling beta with political regime markers:
+
+![](assets/charts/05_rolling_beta_with_markers.png)
+
+Vertical markers include:
+
+- March 2020 – COVID shock
+- August 2020 – PM Bilal appointment
+- February 2024 – AU Chairmanship
+- August 2024 – PM Mokhtar Ould Djay appointment
+
+The behavioral break aligns most clearly with the 2023 FX platform transition and consolidates during the 2024 political reset.
+
+---
+
+## 5. Interpretation
+
+This is not about low inflation.
+
+It is about **elasticity**.
+
+Between 2022 and 2023:
+
+- The economy behaved like an amplifier.
+- External shocks multiplied internally.
+
+Between 2024 and 2025:
+
+- The economy behaved like a shock absorber.
+- External shocks dissipated.
+
+This is the first pillar of the Great Decoupling.
+
+Inflation did not just fall.  
+Its reaction function changed.

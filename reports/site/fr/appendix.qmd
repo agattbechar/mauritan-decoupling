@@ -1,0 +1,195 @@
+# Annexe : Plongée Technique
+
+Cette annexe contient les tableaux de régression complets, les vérifications de robustesse, et les implications de l'analyse.
+
+---
+
+## 1. Résultats Complets des Régressions
+
+### 1.1 Régression de Base du Pass-Through
+
+**Modèle :** Inflation(t) = α + β·Changement_Change(t) + ε
+
+| Coefficient | Estimation | Erreur Std. | t-value | p-value |
+|-------------|------------|-------------|---------|---------|
+| α (constante) | 0,0032 | 0,0018 | 1,78 | 0,081 |
+| β (pass-through) | 0,0941 | 0,0423 | 2,22 | 0,030 |
+
+*Observations : 69, R² = 0,12*
+
+**Interprétation :** Une dépréciation de 1% de l'USD/MRU est associée à environ 0,09% d'inflation mensuelle en plus. Statistiquement significatif mais économiquement modeste.
+
+---
+
+### 1.2 Modèle Complet (Change + Persistance)
+
+**Modèle :** Inflation(t) = α + β·Changement_Change(t) + ρ·Inflation(t-1) + ε
+
+| Coefficient | Estimation | Erreur Std. | t-value | p-value |
+|-------------|------------|-------------|---------|---------|
+| α (constante) | 0,0018 | 0,0015 | 1,20 | 0,235 |
+| β (pass-through) | 0,0938 | 0,0389 | 2,41 | 0,019 |
+| ρ (persistance) | 0,4802 | 0,0891 | 5,39 | <0,001 |
+
+*Observations : 68, R² = 0,33, erreurs standard HAC (maxlags=6)*
+
+**Interprétation :** En contrôlant pour la persistance de l'inflation, le pass-through du change reste à environ 0,09. Cependant, la persistance (ρ ≈ 0,48) explique plus de variation que les chocs de change. C'est l'insight mécanique central : l'inflation a une mémoire qui dépasse la transmission des chocs externes.
+
+---
+
+### 1.3 Comparaison des Régimes (Division Complète de l'Échantillon)
+
+| Régime | Période | β (Pass-Through) | ρ (Persistance) | N | R² |
+|--------|---------|------------------|-----------------|---|----|
+| Amplificateur | 2022-2023 | 0,121 | 0,613 | 24 | 0,41 |
+| Amortisseur | 2024-2025 | -0,022 | 0,412 | 24 | 0,18 |
+
+**Insight clé :** Non seulement le pass-through s'est effondré (de 0,12 à effectivement 0), mais la persistance de l'inflation a également diminué significativement. Le système a changé dans les deux dimensions simultanément.
+
+---
+
+## 2. Profil de Correlation par Délai
+
+Corrélations entre inflation(t) et Changement_Change(t-k) :
+
+| Délai (mois) | Corrélation avec Inflation MoM | Corrélation avec Inflation YoY |
+|--------------|-------------------------------|-------------------------------|
+| 0 | 0,156 | 0,089 |
+| 1 | 0,042 | 0,023 |
+| 2 | -0,028 | -0,015 |
+| 3 | -0,087 | -0,067 |
+| 4 | -0,034 | -0,031 |
+| 5 | 0,012 | 0,008 |
+| 6 | -0,045 | -0,052 |
+
+**Interprétation :** Les effets de change apparaissent de façon contemporaine (délai 0) et s'estompent rapidement. Il n'y a pas d'accumulation retardée à 6-12 mois. Cela écarte les mécanismes de transmission à combustion lente.
+
+![Profil de Correlation par Délai](../docs/assets/charts/lag_correlation.png)
+
+---
+
+## 3. Analyse de Volatilité
+
+| Période | Volatilité Change (σ) | Volatilité Inflation (σ) | Pass-Through (β) |
+|--------|----------------------|-------------------------|------------------|
+| Pré-2023 | 0,490 | 0,309 | 0,12 |
+| 2024+ | 0,504 | 0,322 | -0,02 |
+
+**Conclusion critique :** La volatilité du change est restée essentiellement inchangée (0,49 → 0,50), pourtant le pass-through s'est effondré. C'est la preuve mécanique que la *réponse du système* a changé, pas l'ampleur du choc.
+
+---
+
+## 4. Analyse par Catégorie (Répartition COICOP)
+
+### 4.1 Alimentation et Boissons Non Alcoolisées
+
+| Régime | β (Alimentation) | ρ (Alimentation) |
+|--------|-----------------|------------------|
+| Amplificateur (2022-2023) | 0,202 | 0,738 |
+| Amortisseur (2024-2025) | -0,272 | 0,399 |
+
+L'alimentation a montré le découplage le plus spectaculaire. En 2022-2023, la dépréciation du change se transmettait fortement aux prix alimentaires (β ≈ 0,20). D'ici 2024-2025, cette relation s'est non seulement affaiblie mais a changé de direction (β ≈ -0,27, bien que non statistiquement significatif). Cela suggère des changements fondamentaux dans la formation des prix alimentaires — possiblement des chaînes d'approvisionnement domestiques améliorées, des stocks tampons, ou une réduction de la dépendance aux importations pour les denrées de base.
+
+### 4.2 Transport
+
+L'inflation du transport était très volatile (liée au carburant) mais a montré une persistance déclinante à travers les régimes. La catégorie grimpe avec les prix mondiaux de l'énergie mais ne propage plus ces chocs vers les mois suivants.
+
+### 4.3 Proxy Services
+
+Les services ont montré une faible autocorrélation, parfois même négative, suggérant des prix administrés ou contractuellement rigides qui ne suivent pas la dynamique inflationniste mécanique.
+
+---
+
+## 5. Vérifications de Robustesse
+
+### 5.1 Tailles de Fenêtres Alternatives
+Des fenêtres glissantes de 18, 24 et 30 mois montrent toutes le même motif qualitatif : β et ρ diminuent fortement après 2023. La fenêtre de 24 mois représente le meilleur équilibre entre la stabilité de l'estimation et la détection de régime.
+
+### 5.2 Mesures Alternatives de l'Inflation
+L'utilisation de l'inflation année sur année au lieu du mois sur mois réduit le bruit mais montre des motifs de régime identiques. Le découplage est robuste à la définition de l'inflation.
+
+### 5.3 Traitement des Valeurs Aberrantes
+Écarter la valeur aberrante du pic des matières premières de mars 2022 ne change pas les conclusions. La rupture structurelle n'est pas pilotée par des observations uniques.
+
+---
+
+## 6. Qualité des Données et Limitations
+
+### Ce Que Nous Pouvons Affirmer
+- Preuve mécanique claire d'une réduction du pass-through du change
+- Preuve mécanique claire d'une réduction de la persistance de l'inflation
+- Le timing de la rupture structurelle coïncide avec les changements institutionnels (modernisation de la plateforme de change, transition politique)
+
+### Ce Que Nous Ne Pouvons Pas Affirmer (Limites d'Inférence Causale)
+- **Causalité :** Nous observons une corrélation dans le timing entre les changements institutionnels et les changements mécaniques, mais ne pouvons pas isoler la contribution causale d'aucun facteur unique.
+- **Attribution politique :** Nous ne pouvons pas démêler la modernisation de la plateforme de change de la désinflation mondiale plus large ou des changements de politique domestique.
+- **Permanence :** Nous observons un changement de régime sur 24 mois. Si cela est permanent dépend de la continuité politique future.
+- **Équilibre général :** Nous analysons des corrélations partielles, pas des relations macroéconomiques structurelles complètes.
+
+### Contraintes de Données
+- Les poids de l'IPC sont supposés constants (les poids BCM réels peuvent varier)
+- Les données de change sont les taux officiels de la BCM, pas les taux du marché parallèle
+- Aucune mesure directe des attentes inflationnistes
+- Aucun indice de prix externes (les prix mondiaux des matières premières sont traités comme implicites via le timing)
+
+---
+
+## 7. Conclusion : Ce Que le Découplage Signifie
+
+### La Réalisation Technique
+
+Le système inflationniste de la Mauritanie a subi une transformation structurelle entre 2022 et 2025. L'économie est passée d'un **régime amplificateur** — où les chocs externes se multipliaient via un fort pass-through du change et une persistance de l'inflation — à un **régime amortisseur** où les chocs se dissipaient rapidement.
+
+Ce n'est pas simplement une désinflation. De nombreux pays connaissent une inflation décroissante. Peu connaissent un changement fondamental dans leur *mécanisme* inflationniste.
+
+Les données montrent :
+- Le pass-through est tombé de β ≈ 0,12 à β ≈ 0
+- La persistance est tombée de ρ ≈ 0,74 à ρ ≈ 0,40
+- Ces changements sont survenus tandis que la volatilité du change restait constante
+
+Quelque chose dans le câblage du système a changé.
+
+### Le Récit Institutionnel
+
+Le timing coïncide avec deux changements institutionnels majeurs :
+1. **2023 :** Modernisation du marché des changes (plateforme aux enchères multi-prix)
+2. **2024 :** Transition exécutive et consolidation politique
+
+Nous ne pouvons pas assigner définitivement la causalité. Mais la corrélation est frappante. La rupture comportementale apparaît pendant le déploiement de la plateforme de change et se consolide sous la nouvelle administration.
+
+Cela suggère — mais ne prouve pas — que la crédibilité institutionnelle et la conception du marché comptent pour la dynamique inflationniste au-delà de la simple mécanique monétaire.
+
+### L'Économie Politique (Où se Positionne l'Analyste)
+
+**Le mérite où il est dû :** La stabilisation du mécanisme inflationniste de la Mauritanie est une réalisation réelle. Que ce soit dû aux réformes de la BCM, à la discipline budgétaire, ou aux conditions mondiales favorables, le résultat est réel. Les données sont sans équivoque. Le système est moins fragile qu'il ne l'était en 2022.
+
+**Mais le mérite n'est pas l'absolution :** Les améliorations structurelles de la dynamique inflationniste servent le peuple mauritanien, pas une administration particulière. Une réduction du pass-through signifie que les ménages sont moins vulnérables aux chocs de change. Une baisse de la persistance signifie que les crises inflationnistes s'estompent plus vite. Ce sont des biens publics.
+
+**Le chemin du technocrate :** Le but de cette analyse n'est pas d'applaudir ou de condamner, mais de *mesurer*. Quand les gouvernements livrent des améliorations fonctionnelles, ils devraient être reconnus — cela construit la crédibilité requise pour offrir une critique constructive là où cela compte. L'ère de l'exportation de gaz apporte de nouveaux défis : risques de maladie hollandaise, gestion des dépenses, questions de distribution. Une analyse crédible de ce qui fonctionne crée la position pour conseiller sur ce qui vient ensuite.
+
+**L'opposition qui construit :** Une véritable opposition n'est pas une négation réflexe. C'est la capacité de dire : « Cela a fonctionné. Assurons-nous maintenant que la prochaine phase fonctionne aussi — et plus équitablement. » Le découplage est une fondation, pas une destination.
+
+### Questions en Avant
+
+Le régime amortisseur est une opportunité, pas une garantie :
+
+1. **Persistera-t-il ?** Les ruptures structurelles peuvent s'inverser. Une crédibilité institutionnelle continue est requise.
+
+2. **Pourra-t-il résister aux revenus gaziers ?** Les mannes à l'exportation créent typiquement une pression à l'appréciation et une maladie hollandaise. Le régime amortisseur tiendra-t-il quand la monnaie voudra se renforcer ?
+
+3. **Qui en bénéficie ?** Une volatilité inflationniste plus faible aide tout le monde, mais la distribution des revenus gaziers déterminera si la stabilisation se traduit en gains de bien-être généralisés.
+
+4. **Qu'ancre les attentes maintenant ?** Si le change ne pilote plus la psychologie inflationniste, qu'est-ce qui le fait ? La crédibilité de la politique domestique ? Les contrôles de prix administratifs ? Quelque chose doit ancrer les attentes dans le nouveau régime.
+
+### Mot Final
+
+Le Grand Découplage de la Mauritanie est réel, mesurable, et significatif. L'économie est structurellement moins fragile qu'elle ne l'était il y a trois ans. Cela vaut la peine d'être reconnu — et vaut la peine d'être renforcé.
+
+Le travail de gestion économique n'est jamais fini. Mais pour cette phase, les données parlent clairement : le système a appris à absorber les chocs au lieu de les multiplier. C'est une fondation qui vaut la peine d'être conservée.
+
+---
+
+*Toute analyse reproductible à partir des données brutes. Tout code disponible. Toute affirmation vérifiable.*
+
+*Bechar Agatt*
+*Février 2025*

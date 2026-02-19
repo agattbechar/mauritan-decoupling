@@ -1,0 +1,257 @@
+# Methodology: How the System Was Measured
+
+This report is narrative in tone.
+
+But the conclusions are mechanical.
+
+Every claim rests on reproducible transformations and transparent statistical structure.
+
+Nothing is inferred without measurement.
+
+---
+
+## 1. Data Window
+
+**Period:** February 2020 – December 2025  
+**Frequency:** Monthly  
+
+Why February 2020?
+
+- FX data availability begins 2020-02-01
+- CPI monthly series aligned from 2020-M02
+- Avoids transition noise immediately after 2019 presidential change
+- Includes the full COVID and commodity shock cycle
+
+---
+
+## 2. Core Data Sources
+
+### Exchange Rate (FX)
+
+- Daily USD/MRU
+- Aggregated to monthly average
+- Monthly percentage change computed:
+
+\[
+\Delta FX_t = \frac{FX_t - FX_{t-1}}{FX_{t-1}}
+\]
+
+---
+
+### Consumer Price Index (CPI)
+
+Selected series:
+
+- FREQUENCY: Monthly  
+- TRANSFORMATION: Standard reference period (2010=100), Index  
+- COICOP: All Items (headline)  
+- Category-level indices (Food, Transport, etc.)
+
+Inflation computed manually:
+
+\[
+\pi_t = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}}
+\]
+
+Year-over-year:
+
+\[
+\pi^{YoY}_t = \frac{CPI_t - CPI_{t-12}}{CPI_{t-12}}
+\]
+
+We do not rely on precomputed inflation.
+
+We calculate it directly.
+
+---
+
+## 3. Exchange Rate Pass-Through (β)
+
+The pass-through coefficient measures:
+
+> How much inflation responds to FX movement.
+
+Model:
+
+\[
+\pi_t = \alpha + \beta \Delta FX_t + \varepsilon_t
+\]
+
+Where:
+
+- \( \pi_t \) = monthly inflation
+- \( \Delta FX_t \) = monthly FX change
+- \( \beta \) = pass-through sensitivity
+
+Interpretation:
+
+- β > 0 → FX depreciation increases inflation
+- β ≈ 0 → weak transmission
+- β < 0 → FX movement not transmitting in expected direction
+
+---
+
+### Rolling Estimation
+
+To detect regime shifts, we estimate β over rolling 24-month windows.
+
+Why 24 months?
+
+- Long enough to stabilize regression
+- Short enough to detect structural shifts
+
+This produces time-varying β(t).
+
+---
+
+## 4. Inflation Persistence (ρ)
+
+Inflation memory is estimated using AR(1):
+
+\[
+\pi_t = \alpha + \rho \pi_{t-1} + \varepsilon_t
+\]
+
+Where:
+
+- \( \rho \) measures persistence
+- \( 0 < \rho < 1 \) → inflation has memory
+- \( \rho \approx 0 \) → inflation resets quickly
+- \( \rho > 0.6 \) → strong inertia
+
+---
+
+### Half-Life of a Shock
+
+Half-life measures how long a shock lasts:
+
+\[
+\text{Half-Life} = \frac{\ln(0.5)}{\ln(\rho)}
+\]
+
+Estimated result:
+
+- Overall ρ ≈ 0.57
+- Half-life ≈ 1.24 months
+- After 3 months: \( \rho^3 ≈ 0.188 \)
+
+Meaning:
+
+A typical shock loses 80% of its strength within three months.
+
+But this was not constant over time.
+
+Rolling ρ shows regime behavior.
+
+---
+
+## 5. Volatility Analysis
+
+Volatility computed as rolling 6-month standard deviation:
+
+\[
+\sigma_t = SD(\pi_{t-5}, ..., \pi_t)
+\]
+
+Comparison:
+
+- Pre-2023 FX volatility: 0.4903
+- 2024+ FX volatility: 0.5036
+
+- Pre-2023 inflation volatility: 0.3088
+- 2024+ inflation volatility: 0.3222
+
+Observation:
+
+FX volatility did not fall.
+
+But transmission weakened.
+
+This is critical.
+
+The shock size remained.
+
+The system response changed.
+
+---
+
+## 6. Regime Definition
+
+Two structural regimes identified:
+
+### Amplifier Regime (2022–2023)
+
+- β high
+- ρ high
+- Commodity shock period
+
+### Absorber Regime (2024–2025)
+
+- β near zero
+- ρ lower
+- Institutional transition period
+
+These were defined using rolling coefficient averages:
+
+See:
+
+analysis/outputs/10_regime_table.csv
+
+
+---
+
+## 7. Structural Break Markers
+
+Charts annotate:
+
+- March 2020 (COVID shock)
+- April 2022 (BCM leadership shift)
+- February 2024 (AU Chairmanship)
+- August 2024 (New Prime Minister)
+- April 2025 (Gas export phase)
+
+These are not assumed causes.
+
+They are contextual anchors for interpretation.
+
+---
+
+## 8. What This Methodology Does Not Claim
+
+- No structural causality model
+- No DSGE framework
+- No VECM or impulse response modeling
+
+This project measures:
+
+Behavioral structure.
+
+It tracks:
+
+- Transmission strength
+- Memory persistence
+- Volatility interaction
+
+And tests whether those mechanics changed.
+
+---
+
+## 9. Reproducibility
+
+All scripts located in:
+
+analysis/
+
+
+All processed outputs saved in:
+
+
+All charts generated programmatically.
+
+This report is fully reproducible from raw inputs.
+
+---
+
+The next page turns to data transparency.
+
+Nothing hidden.

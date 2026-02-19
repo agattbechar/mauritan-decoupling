@@ -1,0 +1,190 @@
+# Data: What Was Measured
+
+Every conclusion in this report rests on two primary datasets:
+
+1. The USD/MRU exchange rate
+2. The Mauritanian Consumer Price Index (CPI)
+
+Nothing else is introduced without documentation.
+
+---
+
+# 1. Exchange Rate (USD/MRU)
+
+### Source
+Central Bank of Mauritania (BCM)  
+Daily official USD/MRU exchange rate file (Excel format)
+
+### Coverage
+- Start: 2020-02-01
+- End: 2025-12-19
+- Frequency: Daily
+- Currency: US Dollar vs Mauritanian Ouguiya (MRU)
+
+---
+
+## 1.1 Monthly Aggregation
+
+Daily rates are converted into monthly averages:
+
+\[
+FX_{month} = \text{mean of daily USD/MRU during month}
+\]
+
+Monthly percent change:
+
+\[
+\Delta FX_t = \frac{FX_t - FX_{t-1}}{FX_{t-1}}
+\]
+
+This aligns frequency with CPI.
+
+---
+
+# 2. Consumer Price Index (CPI)
+
+### Country
+Mauritania, Islamic Republic of
+
+### Observations in raw file
+150 total series for Mauritania
+
+These include:
+- Monthly
+- Quarterly
+- Annual
+- Index levels
+- Percent changes
+- Weights
+- Multiple COICOP categories
+
+We strictly filter.
+
+---
+
+## 2.1 Baseline Selection Rules
+
+To avoid mixing incompatible series, baseline CPI uses:
+
+- FREQUENCY: Monthly
+- TYPE_OF_TRANSFORMATION: Standard reference period (2010=100), Index
+- COICOP_1999: All Items
+
+Selected headline series:
+
+MRT.CPI._T.SRP_IX.M
+
+This is the official monthly headline CPI index.
+
+---
+
+## 2.2 Inflation Calculation
+
+We compute inflation manually.
+
+Monthly inflation:
+
+\[
+\pi_t = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}}
+\]
+
+Year-over-year inflation:
+
+\[
+\pi^{YoY}_t = \frac{CPI_t - CPI_{t-12}}{CPI_{t-12}}
+\]
+
+No precomputed percent changes are used.
+
+---
+
+# 3. COICOP Breakdown
+
+Mauritania CPI is divided into 13 categories:
+
+- Food and non-alcoholic beverages
+- Housing, water, electricity, gas and fuels
+- Transport
+- Health
+- Education
+- Communication
+- Recreation and culture
+- Clothing and footwear
+- Restaurants and hotels
+- Alcoholic beverages, tobacco and narcotics
+- Furnishings and household maintenance
+- Miscellaneous goods and services
+- All Items
+
+Each category has:
+
+- Monthly index
+- Weight series (monthly and annual)
+
+These are used to measure:
+
+- Category-specific pass-through
+- Category-specific persistence
+- Contribution to headline inflation
+
+---
+
+# 4. Time Coverage
+
+Final merged dataset:
+
+- Start: 2020-02
+- End: 2025-12
+- Total months: 71
+
+This window includes:
+
+- COVID supply shock
+- Global commodity spike (2022)
+- BCM institutional transition (2022–2023)
+- FX platform modernization (2023)
+- Presidential re-election (2024)
+- Prime Minister transition (2024)
+- Initial gas export phase (2025)
+
+---
+
+# 5. Processed Output
+
+Merged dataset stored at:
+
+analysis/outputs/merged_fx_cpi_2020_2025.csv
+
+
+Contains:
+
+- date
+- fx_usd_avg
+- fx_mom_pct
+- cpi_index
+- infl_mom_pct
+- infl_yoy_pct
+- category indices (Food, Transport, etc.)
+- category inflation rates
+- rolling volatility
+- rolling persistence estimates
+- rolling pass-through estimates
+
+---
+
+# 6. Why This Matters
+
+The integrity of macroeconomic research depends on:
+
+- Frequency alignment
+- Series consistency
+- Avoiding transformation mixing
+- Transparent filtering
+
+This dataset follows those principles.
+
+The findings are not rhetorical.
+
+They are mechanical.
+
+The next section shows how those mechanics change over time.
