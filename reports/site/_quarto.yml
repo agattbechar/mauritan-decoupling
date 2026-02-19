@@ -1,8 +1,8 @@
-project:
+   project:
      type: website
      output-dir: _site
 
-website:
+   website:
      title: "The Great Decoupling"
      site-url: http://localhost:8000
 
@@ -62,7 +62,7 @@ website:
          - href: future.qmd
            text: Future
 
-format:
+   format:
      html:
        theme:
          - darkly
@@ -70,5 +70,5 @@ format:
        toc: true
        math: mathjax
 
-execute:
+   execute:
      freeze: auto
