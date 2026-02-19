@@ -1,191 +1,97 @@
-# The Great Decoupling — Mauritania FX-Inflation Analysis
+# The Great Decoupling: Mauritania's Inflation Mechanism Shift (2020-2025)
 
-**Author:** Bechar Agatt  
-**Period:** February 2020 – December 2025  
-**Data:** USD/MRU exchange rates + Mauritanian CPI (headline + COICOP categories)
+[![Website](https://img.shields.io/badge/Website-Live-blue)](https://becharagatt.github.io/mauritania-decoupling)
+[![Language](https://img.shields.io/badge/Language-EN%2FFR-green)](https://becharagatt.github.io/mauritania-decoupling)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
----
+> **A quantitative microstructure analysis of Mauritania's inflation regime transformation**
 
-## The Core Finding
+## Overview
 
-Mauritania's inflation system underwent a structural transformation between 2022-2023 and 2024-2025. The economy shifted from an **amplifier regime** (where external shocks multiplied through high FX pass-through and inflation persistence) to an **absorber regime** (where shocks dissipated rapidly).
+This project presents the first rigorous empirical analysis of Mauritania's inflation dynamics during the critical 2020-2025 period. Using Central Bank of Mauritania (BCM) and IMF data, we demonstrate that Mauritania's inflation system underwent a structural transformation: shifting from an **amplifier regime** (2022-2023) where external shocks multiplied, to an **absorber regime** (2024-2025) where shocks dissipated.
 
-| Regime | FX Pass-Through (β) | Inflation Persistence (ρ) | Character |
-|--------|---------------------|---------------------------|-----------|
-| **Amplifier (2022-2023)** | 0.12 | 0.74 | Shocks multiplied |
-| **Absorber (2024-2025)** | -0.02 | 0.40 | Shocks dissipated |
+## Key Findings
 
-**Critical insight:** FX volatility remained essentially unchanged (~0.49→0.50), but transmission collapsed. The *system response* changed, not the shock magnitude.
+| Metric | Amplifier Regime (2022-2023) | Absorber Regime (2024-2025) |
+|--------|------------------------------|----------------------------|
+| **FX Pass-Through (β)** | 0.12 | -0.02 |
+| **Inflation Persistence (ρ)** | 0.74 | 0.40 |
 
----
+**Critical Insight:** FX volatility remained essentially unchanged (0.49→0.50), yet transmission collapsed. The *system response* changed, not the shock magnitude—indicating structural, not circumstantial, improvement.
 
-## Quick Start
+## What's Inside
 
-### Run the Full Pipeline
-```bash
-cd ~/dev/projects/mauritania-fx-inflation
-python3 run_all.py
-```
+### 📊 Analysis
+- **Rolling regression framework** (24-month windows) for time-varying β and ρ
+- **COICOP category breakdown** (Food, Transport, Services)
+- **Regime comparison** with statistical robustness checks
+- **Volatility analysis** showing system adaptation
 
-### Build the Report Site
-```bash
-cd reports/site
-mkdocs serve
-# Open http://localhost:8000
-```
+### 🌍 Bilingual Presentation
+- **English:** Professional research format for international audiences
+- **Français:** Full translation for Mauritanian policymakers and civil society
 
-### Deploy
-```bash
-cd reports/site
-mkdocs build
-# Deploy site/ folder to your hosting
-```
+### 🔬 Methodology
+- Data: BCM daily FX rates + IMF CPI series (71 months, Feb 2020–Dec 2025)
+- Models: OLS with HAC standard errors, AR(1) persistence
+- Code: Fully reproducible Python pipeline
 
----
+### 📈 Outputs
+- Interactive website with all visualizations
+- Full regression tables and technical appendix
+- Downloadable datasets and replication code
+- Policy implications for Mauritania's gas export era
 
-## Project Structure
+## Repository Structure
 
 ```
 mauritania-fx-inflation/
 ├── data/
-│   ├── raw/              # Original BCM FX + IMF CPI data
+│   ├── raw/              # Original BCM & IMF data
 │   └── processed/        # Cleaned, merged datasets
-├── src/                  # Data preparation scripts
-│   ├── build_*.py        # Dataset construction
-│   ├── regression_*.py   # Statistical models
-│   └── validate_pipeline.py
-├── analysis/             # Analysis + visualization
-│   ├── outputs/          # Generated charts + tables
-│   ├── build_production_charts.py
-│   ├── plots_story.py
-│   ├── structural_overlay.py
-│   └── regime_summary.py
-├── reports/
-│   └── site/             # MkDocs documentation
-│       ├── docs/         # Markdown pages
-│       ├── mkdocs.yml    # Site configuration
-│       └── assets/       # Charts + CSS
-├── run_all.py            # Orchestration script
-└── PROJECT_NOTES.md      # Detailed research log
+├── src/                  # Data preparation & analysis scripts
+├── analysis/             # Charts, tables, outputs
+├── reports/site/         # Quarto website source (EN/FR)
+└── README.md
 ```
 
----
+## Why This Matters
 
-## Key Charts
+Most inflation analysis asks: "Was inflation high or low?"
 
-All charts are generated programmatically and saved to `analysis/outputs/`:
+We ask: **"Did the inflation mechanism itself change?"**
 
-1. **cpi_index.png** — CPI level (2010=100)
-2. **infl_mom.png** — Monthly inflation rate
-3. **fx_mom.png** — USD/MRU monthly change
-4. **volatility.png** — Rolling 6-month volatility comparison
-5. **lag_correlation.png** — FX→inflation lag correlation profile
-6. **03_rolling_beta_fx_24m.png** — Rolling pass-through coefficient
-7. **04_rolling_rho_infl_24m.png** — Rolling persistence coefficient
-8. **05_rolling_beta_with_markers.png** — β with regime markers
-9. **07_rolling_beta_categories.png** — Category-level pass-through
-10. **08_rolling_rho_categories.png** — Category-level persistence
-11. **09_structural_overlay.png** — β and ρ combined regime view
-
----
-
-## Site Structure (Consolidated)
-
-| Page | Content |
-|------|---------|
-| **Home (index)** | Hero framing, core thesis |
-| **The Great Decoupling** | Full thesis + regime table + structural overlay |
-| **Transmission** | FX pass-through analysis (β) |
-| **Memory** | Inflation persistence analysis (ρ) |
-| **Structure** | COICOP category breakdown |
-| **Methodology** | Data sources, transformations, models |
-| **Data** | Source documentation |
-| **Context** | Political/regime timeline (2020-2025) |
-| **Appendix** | Regression tables, robustness, conclusion |
-
----
-
-## Reproducing the Analysis
-
-### Requirements
-```bash
-pip install pandas numpy matplotlib statsmodels
-```
-
-### Step-by-Step
-1. **Data preparation** (if raw data changes):
-   ```bash
-   python3 src/build_fx_monthly_usd.py
-   python3 src/build_cpi_baseline.py
-   python3 src/build_inflation_from_cpi.py
-   python3 src/build_cpi_categories.py
-   python3 src/build_merged_dataset.py
-   ```
-
-2. **Analysis**:
-   ```bash
-   python3 src/lag_profile.py
-   python3 src/regression_baselines.py
-   python3 analysis/build_production_charts.py
-   python3 analysis/plots_story.py
-   python3 analysis/structural_overlay.py
-   python3 analysis/regime_summary.py
-   ```
-
-3. **Or simply**: `python3 run_all.py`
-
----
-
-## Data Sources
-
-- **FX:** Central Bank of Mauritania (BCM), daily USD/MRU, 2020-02-01 to 2025-12-19
-- **CPI:** IMF International Financial Statistics, monthly, 2020-02 to 2025-12
-  - Headline: All Items (2010=100)
-  - Categories: COICOP 1999 classification
-
----
-
-## Methodology Summary
-
-### Pass-Through (β)
-Rolling 24-month regression:  
-`Inflation(t) = α + β·FX_change(t) + ε`
-
-### Persistence (ρ)
-Rolling 24-month AR(1):  
-`Inflation(t) = α + ρ·Inflation(t-1) + ε`
-
-### Regime Definition
-- **Amplifier:** 2022-2023 (24 months, commodity shock period)
-- **Absorber:** 2024-2025 (24 months, post-reform period)
-
-### Robustness
-- Alternative window sizes (18, 30 months) confirm patterns
-- YoY vs MoM inflation definitions yield consistent results
-- Outlier treatment doesn't change conclusions
-
----
-
-## What This Project Shows
-
-**Technical:** A reproducible, transparent analysis of inflation microstructure in a small open economy.
-
-**Substantive:** Evidence that Mauritania's inflation mechanism structurally changed, becoming less fragile to external shocks.
-
-**Political Economy:** The stabilization is real and measurable. Whether driven by BCM reforms, global conditions, or administrative changes, the outcome is a less shock-sensitive system. The gas export era will test whether this resilience persists.
-
----
+This distinction is crucial for policy design in Mauritania's transition to gas-exporting status. If inflation has become less sensitive to external shocks, the economy is structurally more resilient—but the gas windfall will test whether this resilience persists.
 
 ## Citation
 
 If using this analysis:
 
-> Agatt, Bechar. "The Great Decoupling: Mauritania's Inflation Mechanism Shift, 2020-2025." 2025.  
-> [URL when published]
+```bibtex
+@report{agatt2025decoupling,
+  title={The Great Decoupling: Mauritania's Inflation Mechanism Shift, 2020-2025},
+  author={Agatt, Bechar},
+  year={2025},
+  institution={Independent Research},
+  url={https://becharagatt.github.io/mauritania-decoupling}
+}
+```
 
----
+## Data Sources
+
+- **FX Data:** Central Bank of Mauritania (BCM), daily USD/MRU, 2020-2025
+- **CPI Data:** IMF International Financial Statistics, monthly, 2020-2025
+- **Coverage:** 71 months (Feb 2020 – Dec 2025)
 
 ## License
 
 Data: Public sources (BCM, IMF)  
-Analysis: Original work
+Analysis & Code: [MIT License](LICENSE)
+
+## Contact
+
+For questions, collaboration, or media inquiries: [Your contact info]
+
+---
+
+*"We do not speculate. We measure."*
